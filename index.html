@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>To22 採用 ― Unlock Your Potential.</title>
+<meta name="description" content="株式会社To22 第二創業期 採用サイト。CHRO/COO候補・Delivery Manager候補を募集しています。AI時代に、自己効力感を持って働ける人を、最大限に増やす。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F2B52;
+    --navy-light: #1A3D73;
+    --navy-deep: #081B36;
+    --blue: #2E75B6;
+    --light-blue: #DEEBF7;
+    --gold: #D9A82C;
+    --gold-soft: #F5C67A;
+    --gold-bright: #FFD06A;
+    --dark: #1A1A1A;
+    --gray: #595959;
+    --gray-mid: #8B8B8B;
+    --light-gray: #F2F2F2;
+    --soft-bg: #FAFAF7;
+    --white: #FFFFFF;
+    --red: #E83E3E;
+    --green: #2E8B57;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--dark);
+    line-height: 1.7;
+    background: var(--white);
+    overflow-x: hidden;
+  }
+  .serif { font-family: 'Noto Serif JP', serif; }
+  .inter { font-family: 'Inter', sans-serif; letter-spacing: 0.02em; }
+
+  /* Nav */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15, 43, 82, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 16px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid rgba(217, 168, 44, 0.2);
+  }
+  nav .logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; font-size: 20px; color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+  nav .links { display: flex; gap: 32px; align-items: center; }
+  nav .links a {
+    color: var(--white); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s;
+  }
+  nav .links a:hover { color: var(--gold-soft); }
+  nav .apply-btn {
+    background: var(--gold); color: var(--navy); padding: 10px 24px;
+    border-radius: 4px; font-weight: 700; font-size: 13px;
+    transition: background 0.2s;
+  }
+  nav .apply-btn:hover { background: var(--gold-bright); color: var(--navy); }
+  @media (max-width: 768px) {
+    nav { padding: 12px 16px; }
+    nav .links { display: none; }
+    nav .apply-btn { padding: 8px 16px; font-size: 12px; }
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-light) 100%);
+    color: var(--white);
+    display: flex; align-items: center;
+    padding: 120px 40px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(217, 168, 44, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(46, 117, 182, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-content {
+    max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
+    width: 100%;
+  }
+  .hero-tag {
+    color: var(--gold); font-size: 13px; font-weight: 700;
+    letter-spacing: 0.25em; margin-bottom: 24px;
+    font-family: 'Inter', sans-serif;
+  }
+  .hero h1 {
+    font-family: 'Inter', sans-serif; font-weight: 800;
+    font-size: clamp(48px, 9vw, 120px); line-height: 1.05;
+    font-style: italic; margin-bottom: 24px;
+    background: linear-gradient(135deg, var(--white) 0%, var(--gold-soft) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero h2 {
+    font-weight: 700; font-size: clamp(24px, 4vw, 42px);
+    color: var(--gold-soft); margin-bottom: 56px;
+    letter-spacing: 0.02em;
+  }
+  .hero-meta {
+    border-left: 4px solid var(--gold); padding-left: 24px;
+    margin-bottom: 48px; max-width: 700px;
+  }
+  .hero-meta-label { color: var(--gold); font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+  .hero-meta h3 { font-size: clamp(20px, 2.5vw, 28px); font-weight: 700; margin-bottom: 8px; }
+  .hero-meta p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+  .hero-roles { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+  .hero-role-chip {
+    background: rgba(217, 168, 44, 0.15); border: 1px solid var(--gold);
+    color: var(--gold-soft); padding: 12px 24px; border-radius: 50px;
+    font-size: 14px; font-weight: 600;
+  }
+  .hero-cta {
+    display: inline-block; background: var(--gold); color: var(--navy);
+    padding: 18px 48px; border-radius: 4px; text-decoration: none;
+    font-weight: 800; font-size: 16px; letter-spacing: 0.05em;
+    transition: all 0.3s; box-shadow: 0 10px 40px rgba(217, 168, 44, 0.3);
+  }
+  .hero-cta:hover { background: var(--gold-bright); transform: translateY(-2px); }
+  .hero-author {
+    position: absolute; bottom: 32px; left: 40px;
+    font-size: 12px; color: rgba(255,255,255,0.6);
+  }
+  @media (max-width: 768px) {
+    .hero { padding: 100px 20px 60px; }
+    .hero-author { left: 20px; bottom: 16px; }
+  }
+
+  /* Common section styles */
+  section.content-section {
+    padding: 120px 40px; max-width: 1200px; margin: 0 auto;
+  }
+  section.dark { background: var(--navy); color: var(--white); }
+  section.dark-deep { background: var(--navy-deep); color: var(--white); }
+  section.full-width { max-width: 100%; padding: 0; }
+  section.full-width > .inner { max-width: 1200px; margin: 0 auto; padding: 120px 40px; }
+  @media (max-width: 768px) {
+    section.content-section, section.full-width > .inner { padding: 80px 20px; }
+  }
+
+  /* Section labels & headings */
+  .section-label {
+    color: var(--gold); font-family: 'Inter', sans-serif;
+    font-weight: 700; font-size: 13px; letter-spacing: 0.25em;
+    margin-bottom: 24px; display: inline-block;
+    padding-bottom: 8px; border-bottom: 2px solid var(--gold);
+  }
+  section.dark .section-label, section.dark-deep .section-label { color: var(--gold-soft); border-color: var(--gold); }
+  .section-title {
+    font-size: clamp(32px, 5vw, 56px); font-weight: 800;
+    line-height: 1.2; margin-bottom: 24px; color: var(--navy);
+  }
+  section.dark .section-title, section.dark-deep .section-title { color: var(--white); }
+  .section-subtitle {
+    font-size: clamp(15px, 1.8vw, 18px); color: var(--gray);
+    line-height: 1.8; margin-bottom: 64px; max-width: 800px;
+  }
+  section.dark .section-subtitle, section.dark-deep .section-subtitle { color: rgba(255,255,255,0.7); }
+
+  /* The Moment */
+  .moment-list {
+    display: flex; flex-direction: column; gap: 24px;
+    margin-top: 48px; margin-bottom: 56px;
+  }
+  .moment-item {
+    display: flex; align-items: center; gap: 24px;
+    padding: 24px; background: rgba(255,255,255,0.05);
+    border-left: 4px solid var(--gold); border-radius: 4px;
+  }
+  .moment-icon {
+    font-size: 32px; flex-shrink: 0;
+  }
+  .moment-text {
+    font-size: clamp(16px, 2vw, 20px); font-weight: 500;
+    color: rgba(255,255,255,0.95);
+  }
+  .moment-cta {
+    background: var(--gold); color: var(--navy);
+    padding: 24px 32px; border-radius: 4px;
+    text-align: center; font-size: clamp(16px, 2vw, 20px);
+    font-weight: 800;
+  }
+
+  /* Founder */
+  .founder-grid {
+    display: grid; grid-template-columns: 1fr 2fr; gap: 64px;
+    margin-top: 48px;
+  }
+  @media (max-width: 768px) { .founder-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .founder-card {
+    background: var(--light-blue); padding: 48px 32px;
+    border-radius: 8px; text-align: center;
+    border: 2px solid var(--navy);
+  }
+  .founder-avatar {
+    font-size: 120px; line-height: 1; margin-bottom: 24px;
+  }
+  .founder-name {
+    font-size: 28px; font-weight: 800; color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .founder-name-en {
+    font-family: 'Inter', sans-serif; font-style: italic;
+    color: var(--gray); margin-bottom: 24px;
+  }
+  .founder-divider {
+    height: 3px; background: var(--gold); width: 80px;
+    margin: 0 auto 24px;
+  }
+  .founder-meta { text-align: left; }
+  .founder-meta-row {
+    display: flex; gap: 12px; margin-bottom: 12px;
+    padding-bottom: 8px; border-bottom: 1px solid rgba(15, 43, 82, 0.1);
+  }
+  .founder-meta-label { font-size: 11px; color: var(--gray); width: 80px; }
+  .founder-meta-value { font-size: 13px; font-weight: 600; color: var(--navy); }
+
+  .founder-highlights {
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .founder-highlight {
+    display: grid; grid-template-columns: 120px 1fr; gap: 24px;
+    padding: 20px 24px; background: var(--light-gray);
+    border-radius: 4px; border-left: 3px solid var(--gold);
+  }
+  @media (max-width: 768px) {
+    .founder-highlight { grid-template-columns: 1fr; gap: 8px; }
+  }
+  .founder-highlight-label { font-weight: 700; color: var(--navy); font-size: 14px; }
+  .founder-highlight-text { color: var(--dark); font-size: 14px; line-height: 1.7; }
+
+  /* Track Record */
+  .records-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    margin-top: 48px; margin-bottom: 48px;
+  }
+  @media (max-width: 768px) { .records-grid { grid-template-columns: repeat(2, 1fr); } }
+  .record-card {
+    background: var(--white); padding: 32px 24px;
+    border-radius: 8px; text-align: center;
+    border: 2px solid; border-color: var(--gold);
+    transition: transform 0.3s;
+  }
+  .record-card:nth-child(2) { border-color: var(--navy); }
+  .record-card:nth-child(3) { border-color: var(--blue); }
+  .record-card:nth-child(4) { border-color: var(--green); }
+  .record-card:hover { transform: translateY(-4px); }
+  .record-title {
+    font-size: 14px; font-weight: 600; color: var(--navy);
+    margin-bottom: 16px; line-height: 1.4;
+  }
+  .record-value {
+    font-size: clamp(28px, 4vw, 40px); font-weight: 900;
+    color: var(--gold); margin-bottom: 12px;
+    font-family: 'Inter', sans-serif;
+  }
+  .record-card:nth-child(2) .record-value { color: var(--navy); }
+  .record-card:nth-child(3) .record-value { color: var(--blue); }
+  .record-card:nth-child(4) .record-value { color: var(--green); }
+  .record-desc { font-size: 12px; color: var(--gray); line-height: 1.5; }
+
+  /* Revenue chart */
+  .chart-container {
+    background: var(--light-gray); padding: 48px 32px;
+    border-radius: 8px; margin-top: 48px;
+  }
+  .chart-title { font-weight: 700; color: var(--navy); margin-bottom: 32px; }
+  .chart-bars {
+    display: flex; justify-content: space-around;
+    align-items: flex-end; height: 280px;
+    border-bottom: 3px solid var(--navy); padding-bottom: 0;
+  }
+  .chart-bar-wrap {
+    flex: 1; max-width: 120px; text-align: center;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .chart-bar-value {
+    font-weight: 700; color: var(--navy); font-size: 14px;
+    margin-bottom: 8px; font-family: 'Inter', sans-serif;
+  }
+  .chart-bar {
+    width: 60%; background: linear-gradient(to top, var(--blue), var(--gold));
+    border-radius: 4px 4px 0 0; min-height: 20px;
+  }
+  .chart-bar.highlight { background: linear-gradient(to top, var(--gold), var(--gold-bright)); }
+  .chart-bar-label {
+    margin-top: 12px; font-weight: 600; font-size: 13px; color: var(--dark);
+  }
+  .chart-bar-note { font-size: 10px; color: var(--gray); margin-top: 4px; }
+
+  /* Social Issue */
+  .talents-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
+    margin-top: 48px;
+  }
+  @media (max-width: 768px) { .talents-grid { grid-template-columns: repeat(2, 1fr); } }
+  .talent-card {
+    background: var(--white); border: 2px solid;
+    border-radius: 8px; padding: 24px 16px; text-align: center;
+    transition: transform 0.3s;
+  }
+  .talent-card:hover { transform: translateY(-4px); }
+  .talent-card:nth-child(1) { border-color: #ED7D31; }
+  .talent-card:nth-child(2) { border-color: #FD9696; }
+  .talent-card:nth-child(3) { border-color: #2E8B57; }
+  .talent-card:nth-child(4) { border-color: var(--blue); }
+  .talent-card:nth-child(5) { border-color: #7B2CBF; }
+  .talent-icon { font-size: 48px; margin-bottom: 16px; }
+  .talent-title { font-weight: 700; color: var(--navy); font-size: 14px; margin-bottom: 12px; }
+  .talent-phrase { font-size: 12px; color: var(--dark); margin-bottom: 16px; min-height: 50px; }
+  .talent-scale {
+    font-weight: 800; font-family: 'Inter', sans-serif;
+    border-top: 2px solid; padding-top: 12px; font-size: 14px;
+  }
+  .talent-card:nth-child(1) .talent-scale { color: #ED7D31; border-color: #ED7D31; }
+  .talent-card:nth-child(2) .talent-scale { color: #FD9696; border-color: #FD9696; }
+  .talent-card:nth-child(3) .talent-scale { color: #2E8B57; border-color: #2E8B57; }
+  .talent-card:nth-child(4) .talent-scale { color: var(--blue); border-color: var(--blue); }
+  .talent-card:nth-child(5) .talent-scale { color: #7B2CBF; border-color: #7B2CBF; }
+  .social-impact-msg {
+    margin-top: 48px; text-align: center;
+    font-size: clamp(18px, 2.5vw, 24px); font-weight: 700;
+    color: var(--red); font-style: italic;
+  }
+
+  /* Purpose */
+  .purpose-hero {
+    text-align: center; padding: 80px 40px;
+  }
+  .purpose-tag {
+    color: var(--gold); font-family: 'Inter', sans-serif;
+    font-size: 13px; letter-spacing: 0.3em; font-weight: 700;
+    margin-bottom: 32px;
+  }
+  .purpose-main {
+    font-family: 'Inter', sans-serif; font-style: italic;
+    font-weight: 900; font-size: clamp(48px, 8vw, 96px);
+    line-height: 1.1; margin-bottom: 32px;
+    background: linear-gradient(135deg, var(--white) 0%, var(--gold-soft) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .purpose-jp {
+    font-size: clamp(28px, 4vw, 44px); font-weight: 700;
+    color: var(--gold-soft); margin-bottom: 56px;
+  }
+  .purpose-text {
+    max-width: 720px; margin: 0 auto;
+    font-size: clamp(16px, 1.8vw, 20px); line-height: 2;
+    color: rgba(255,255,255,0.85);
+  }
+  .purpose-text .highlight {
+    color: var(--gold-soft); font-weight: 700; font-size: 1.1em;
+  }
+
+  /* Mission */
+  .mission-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    margin-top: 48px;
+  }
+  @media (max-width: 768px) { .mission-grid { grid-template-columns: 1fr; } }
+  .mission-card {
+    background: var(--white); border: 3px solid; border-radius: 12px;
+    overflow: hidden; transition: transform 0.3s;
+  }
+  .mission-card:hover { transform: translateY(-4px); }
+  .mission-card:nth-child(1) { border-color: var(--blue); }
+  .mission-card:nth-child(2) { border-color: var(--navy); }
+  .mission-card:nth-child(3) { border-color: var(--gold); }
+  .mission-header {
+    color: var(--white); padding: 16px; text-align: center;
+    font-weight: 800; font-size: 18px;
+  }
+  .mission-card:nth-child(1) .mission-header { background: var(--blue); }
+  .mission-card:nth-child(2) .mission-header { background: var(--navy); }
+  .mission-card:nth-child(3) .mission-header { background: var(--gold); color: var(--navy); }
+  .mission-icon {
+    font-size: 72px; text-align: center; padding: 32px 0 16px;
+  }
+  .mission-card:nth-child(1) .mission-icon { color: var(--blue); }
+  .mission-card:nth-child(2) .mission-icon { color: var(--navy); }
+  .mission-card:nth-child(3) .mission-icon { color: var(--gold); }
+  .mission-body {
+    padding: 16px 32px 40px; text-align: center;
+    font-size: 14px; line-height: 1.8; color: var(--dark);
+  }
+
+  /* Company */
+  .company-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    margin-top: 48px;
+  }
+  @media (max-width: 768px) { .company-grid { grid-template-columns: 1fr; } }
+  .info-block h4 {
+    font-size: 18px; font-weight: 700; color: var(--navy);
+    margin-bottom: 16px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--blue);
+  }
+  .info-list { display: flex; flex-direction: column; gap: 8px; }
+  .info-row {
+    display: grid; grid-template-columns: 120px 1fr;
+    gap: 16px; padding: 12px 0;
+    border-bottom: 1px solid var(--light-gray);
+    font-size: 13px;
+  }
+  .info-row .label { color: var(--gray); font-size: 12px; }
+  .info-row .value { font-weight: 600; color: var(--dark); }
+
+  .services-list { display: flex; flex-direction: column; gap: 12px; }
+  .service-card {
+    background: var(--white); border: 1px solid;
+    border-left: 4px solid; border-radius: 4px;
+    padding: 16px 20px; display: grid; grid-template-columns: 1fr;
+  }
+  .service-card.blue { border-color: var(--blue); }
+  .service-card.navy { border-color: var(--navy); }
+  .service-card.gold { border-color: var(--gold); }
+  .service-card.red { border-color: var(--red); }
+  .service-name { font-weight: 700; color: var(--navy); font-size: 14px; }
+  .service-desc { font-size: 12px; color: var(--gray); margin-top: 4px; }
+
+  /* Clients */
+  .clients-intro {
+    text-align: center; max-width: 800px; margin: 0 auto 48px;
+    color: var(--dark); font-size: 16px; line-height: 1.8;
+  }
+  .client-section { margin-bottom: 56px; }
+  .client-section-title {
+    font-weight: 700; color: var(--navy);
+    border-left: 4px solid var(--gold); padding-left: 16px;
+    margin-bottom: 16px; font-size: 14px;
+  }
+  .client-logos {
+    display: flex; flex-wrap: wrap; gap: 12px;
+  }
+  .client-logo {
+    background: var(--white); border: 1px solid var(--light-gray);
+    padding: 12px 24px; border-radius: 4px;
+    font-weight: 600; color: var(--dark); font-size: 14px;
+    transition: all 0.2s;
+  }
+  .client-logo:hover {
+    border-color: var(--gold); color: var(--navy);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  /* New Business */
+  .new-biz-intro {
+    background: rgba(255, 242, 204, 0.5);
+    border: 2px solid var(--gold);
+    padding: 32px; border-radius: 8px;
+    margin-bottom: 48px;
+  }
+  .new-biz-intro-title {
+    font-weight: 700; color: var(--navy); margin-bottom: 16px;
+  }
+  .new-biz-intro ul { list-style: none; padding: 0; }
+  .new-biz-intro li {
+    padding: 8px 0 8px 24px; position: relative;
+    font-size: 14px; color: var(--dark);
+  }
+  .new-biz-intro li::before {
+    content: '●'; position: absolute; left: 0; color: var(--gold);
+  }
+  .biz-diff-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    margin-top: 48px;
+  }
+  @media (max-width: 768px) { .biz-diff-grid { grid-template-columns: 1fr; } }
+  .diff-card {
+    background: var(--white); border: 2px solid;
+    border-radius: 8px; overflow: hidden;
+    transition: transform 0.3s;
+  }
+  .diff-card:hover { transform: translateY(-4px); }
+  .diff-card:nth-child(1) { border-color: var(--navy); }
+  .diff-card:nth-child(2) { border-color: var(--gold); }
+  .diff-card:nth-child(3) { border-color: var(--blue); }
+  .diff-header {
+    padding: 16px; text-align: center;
+    color: var(--white); font-weight: 700; font-size: 16px;
+  }
+  .diff-card:nth-child(1) .diff-header { background: var(--navy); }
+  .diff-card:nth-child(2) .diff-header { background: var(--gold); color: var(--navy); }
+  .diff-card:nth-child(3) .diff-header { background: var(--blue); }
+  .diff-icon { font-size: 56px; text-align: center; padding: 32px 0 12px; }
+  .diff-card:nth-child(1) .diff-icon { color: var(--navy); }
+  .diff-card:nth-child(2) .diff-icon { color: var(--gold); }
+  .diff-card:nth-child(3) .diff-icon { color: var(--blue); }
+  .diff-body { padding: 16px 24px 32px; text-align: center; font-size: 13px; line-height: 1.8; color: var(--dark); }
+  .biz-tagline {
+    text-align: center; margin-top: 48px;
+    font-size: clamp(16px, 2vw, 20px); font-weight: 700;
+    color: var(--red); font-style: italic;
+  }
+
+  /* Transformation */
+  .transform-grid {
+    display: grid; grid-template-columns: 1fr 80px 1fr; gap: 24px;
+    align-items: stretch; margin-top: 48px;
+  }
+  @media (max-width: 768px) {
+    .transform-grid { grid-template-columns: 1fr; }
+    .transform-grid .plus { text-align: center; }
+  }
+  .transform-card {
+    border: 2px solid; border-radius: 8px; padding: 32px;
+  }
+  .transform-card.existing { background: var(--light-blue); border-color: var(--blue); }
+  .transform-card.new { background: #FFF2CC; border-color: var(--gold); }
+  .transform-header {
+    color: var(--white); margin: -32px -32px 24px;
+    padding: 16px; text-align: center; font-weight: 700;
+  }
+  .transform-card.existing .transform-header { background: var(--blue); }
+  .transform-card.new .transform-header { background: var(--gold); color: var(--navy); }
+  .transform-body { color: var(--dark); }
+  .transform-section { margin-bottom: 20px; }
+  .transform-section-title { font-weight: 700; color: var(--navy); margin-bottom: 8px; font-size: 14px; }
+  .transform-section ul { list-style: none; padding: 0; }
+  .transform-section li { font-size: 13px; padding: 4px 0 4px 20px; position: relative; }
+  .transform-section li::before { content: '●'; position: absolute; left: 0; color: var(--gold); font-size: 10px; top: 8px; }
+  .transform-section li.highlight { color: var(--red); font-weight: 700; }
+  .plus {
+    font-size: 56px; font-weight: 900; color: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .transform-msg {
+    background: var(--navy); color: var(--gold-soft);
+    padding: 24px; border-radius: 4px; text-align: center;
+    margin-top: 32px; font-weight: 700;
+  }
+
+  /* Roles */
+  .roles-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    margin-top: 48px;
+  }
+  @media (max-width: 768px) { .roles-grid { grid-template-columns: 1fr; } }
+  .role-card {
+    background: var(--white); border: 3px solid;
+    border-radius: 12px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .role-card.chro { border-color: var(--navy); }
+  .role-card.dm { border-color: var(--gold); }
+  .role-header {
+    padding: 24px; color: var(--white);
+    display: grid; grid-template-columns: 80px 1fr; gap: 16px; align-items: center;
+  }
+  .role-card.chro .role-header { background: var(--navy); }
+  .role-card.dm .role-header { background: var(--gold); color: var(--navy); }
+  .role-number { font-size: 40px; font-weight: 900; font-family: 'Inter', sans-serif; opacity: 0.9; }
+  .role-label { font-size: 11px; opacity: 0.8; margin-bottom: 4px; letter-spacing: 0.2em; }
+  .role-title { font-size: 22px; font-weight: 800; line-height: 1.2; }
+  .role-sub { font-size: 12px; opacity: 0.8; margin-top: 4px; font-style: italic; }
+  .role-body { padding: 32px; flex: 1; }
+  .role-main {
+    font-weight: 700; font-size: 16px; line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .role-card.chro .role-main { color: var(--navy); }
+  .role-card.dm .role-main { color: #C18A1F; }
+  .role-tasks-title {
+    font-weight: 700; color: var(--navy); margin-bottom: 12px;
+    font-size: 14px;
+  }
+  .role-tasks { list-style: none; padding: 0; }
+  .role-tasks li {
+    font-size: 13px; padding: 8px 0 8px 24px;
+    position: relative; line-height: 1.6;
+  }
+  .role-tasks li::before {
+    content: '●'; position: absolute; left: 0;
+    color: var(--gold); top: 11px;
+  }
+
+  /* Mindset */
+  .mindset-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    margin-top: 48px;
+  }
+  @media (max-width: 768px) { .mindset-grid { grid-template-columns: repeat(2, 1fr); } }
+  .mindset-card {
+    background: var(--white); border: 2px solid;
+    border-radius: 8px; overflow: hidden;
+    transition: transform 0.3s;
+  }
+  .mindset-card:hover { transform: translateY(-4px); }
+  .mindset-card:nth-child(1) { border-color: var(--red); }
+  .mindset-card:nth-child(2) { border-color: var(--navy); }
+  .mindset-card:nth-child(3) { border-color: var(--blue); }
+  .mindset-card:nth-child(4) { border-color: var(--gold); }
+  .mindset-header {
+    color: var(--white); padding: 32px 16px;
+    text-align: center; font-size: 56px;
+  }
+  .mindset-card:nth-child(1) .mindset-header { background: var(--red); }
+  .mindset-card:nth-child(2) .mindset-header { background: var(--navy); }
+  .mindset-card:nth-child(3) .mindset-header { background: var(--blue); }
+  .mindset-card:nth-child(4) .mindset-header { background: var(--gold); color: var(--navy); }
+  .mindset-title {
+    font-weight: 700; font-size: 16px; text-align: center;
+    padding: 20px 16px 12px; color: var(--navy);
+  }
+  .mindset-card:nth-child(1) .mindset-title { color: var(--red); }
+  .mindset-card:nth-child(2) .mindset-title { color: var(--navy); }
+  .mindset-card:nth-child(3) .mindset-title { color: var(--blue); }
+  .mindset-card:nth-child(4) .mindset-title { color: #C18A1F; }
+  .mindset-body { padding: 0 16px 32px; font-size: 12px; line-height: 1.7; text-align: center; color: var(--dark); }
+  .mindset-msg {
+    background: rgba(255, 242, 204, 0.5); border: 1px solid var(--gold);
+    padding: 16px; border-radius: 4px;
+    text-align: center; font-weight: 700; color: var(--navy);
+    margin-top: 32px;
+  }
+
+  /* Compensation */
+  .comp-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    margin-top: 48px;
+  }
+  @media (max-width: 768px) { .comp-grid { grid-template-columns: 1fr; } }
+  .comp-card {
+    border: 1px solid; border-radius: 8px; overflow: hidden;
+  }
+  .comp-card.chro { border-color: var(--navy); }
+  .comp-card.dm { border-color: var(--gold); }
+  .comp-header {
+    text-align: center; padding: 16px;
+    font-weight: 700; font-size: 18px;
+  }
+  .comp-card.chro .comp-header { background: var(--navy); color: var(--white); }
+  .comp-card.dm .comp-header { background: var(--gold); color: var(--navy); }
+  .comp-body { padding: 16px; }
+  .comp-row {
+    display: grid; grid-template-columns: 120px 1fr;
+    gap: 16px; padding: 12px 16px; align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+    font-size: 13px;
+  }
+  .comp-row:last-child { border-bottom: none; }
+  .comp-label { color: var(--gray); font-size: 12px; }
+  .comp-value { font-weight: 700; }
+  .comp-card.chro .comp-value { color: var(--navy); }
+  .comp-card.dm .comp-value { color: #C18A1F; }
+
+  /* Process */
+  .process-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    margin-top: 48px;
+  }
+  @media (max-width: 768px) { .process-grid { grid-template-columns: 1fr; } }
+  .process-card {
+    background: var(--white); border: 2px solid var(--navy);
+    border-radius: 8px; overflow: hidden;
+    text-align: center;
+  }
+  .process-step {
+    background: var(--navy); color: var(--white);
+    padding: 12px; font-weight: 700; font-size: 14px;
+  }
+  .process-title { font-weight: 700; color: var(--navy); padding: 24px 16px 12px; font-size: 15px; }
+  .process-meta { font-size: 11px; color: var(--gray); padding: 0 16px 12px; }
+  .process-divider { height: 2px; background: var(--gold); margin: 0 32px; }
+  .process-content { font-size: 12px; padding: 16px; color: var(--dark); line-height: 1.6; min-height: 80px; }
+  .process-total {
+    background: var(--light-blue); border: 1px solid var(--blue);
+    padding: 20px; border-radius: 8px;
+    text-align: center; font-weight: 700; color: var(--navy);
+    margin-top: 32px;
+  }
+
+  /* CTA Final */
+  .cta-section {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+    color: var(--white); padding: 120px 40px;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(217, 168, 44, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(217, 168, 44, 0.1) 0%, transparent 50%);
+  }
+  .cta-inner {
+    max-width: 900px; margin: 0 auto;
+    position: relative; z-index: 1; text-align: center;
+  }
+  .cta-tag {
+    color: var(--gold); letter-spacing: 0.25em;
+    font-weight: 700; font-size: 13px;
+    margin-bottom: 32px; font-family: 'Inter', sans-serif;
+  }
+  .cta-title {
+    font-size: clamp(32px, 5vw, 56px); font-weight: 800;
+    line-height: 1.2; margin-bottom: 40px;
+  }
+  .cta-body {
+    font-size: clamp(15px, 2vw, 18px); line-height: 2;
+    color: rgba(255,255,255,0.85); margin-bottom: 48px;
+  }
+  .cta-body .accent {
+    color: var(--gold-soft); font-weight: 700; font-size: 1.15em;
+    display: block; margin: 16px 0;
+  }
+  .cta-card {
+    background: var(--navy-light); border: 2px solid var(--gold);
+    border-radius: 8px; padding: 40px 32px;
+    text-align: center;
+  }
+  .cta-card-title {
+    font-weight: 700; color: var(--gold-soft); margin-bottom: 24px;
+    font-size: clamp(18px, 2.2vw, 22px);
+  }
+  .cta-button {
+    display: inline-block; background: var(--gold); color: var(--navy);
+    padding: 20px 56px; border-radius: 4px; text-decoration: none;
+    font-weight: 800; font-size: 16px; letter-spacing: 0.05em;
+    box-shadow: 0 10px 40px rgba(217, 168, 44, 0.3);
+    transition: all 0.3s; margin-bottom: 24px;
+  }
+  .cta-button:hover {
+    background: var(--gold-bright); transform: translateY(-2px);
+    box-shadow: 0 14px 50px rgba(217, 168, 44, 0.4);
+  }
+  .cta-contact {
+    color: var(--white); font-size: 14px;
+    margin-top: 24px;
+  }
+  .cta-contact a { color: var(--gold-soft); text-decoration: none; }
+  .cta-contact a:hover { color: var(--gold-bright); }
+  .cta-signature {
+    margin-top: 16px; font-size: 12px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* Footer */
+  footer {
+    background: #000; color: rgba(255,255,255,0.6);
+    padding: 40px; text-align: center; font-size: 12px;
+  }
+  footer .logo {
+    color: var(--gold); font-family: 'Inter', sans-serif;
+    font-weight: 900; font-size: 18px; letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+  footer .links { margin-top: 16px; }
+  footer .links a {
+    color: rgba(255,255,255,0.6); text-decoration: none;
+    margin: 0 12px;
+  }
+  footer .links a:hover { color: var(--gold-soft); }
+
+  /* Animations */
+  .fade-in {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  .fade-in.visible {
+    opacity: 1; transform: translateY(0);
+  }
+
+  /* Confidential ribbon */
+  .confidential {
+    position: fixed; top: 60px; right: -50px;
+    background: var(--red); color: var(--white);
+    padding: 4px 60px; transform: rotate(45deg);
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.2em; z-index: 50;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="#hero" class="logo">TO22</a>
+  <div class="links">
+    <a href="#moment">背景</a>
+    <a href="#founder">代表</a>
+    <a href="#company">事業</a>
+    <a href="#roles">募集職種</a>
+    <a href="#process">プロセス</a>
+    <a href="#cta" class="apply-btn">応募する</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-tag">第二創業期 採用 ／ CONFIDENTIAL</div>
+    <h1>Unlock Your Potential.</h1>
+    <h2>人間の可能性を、解き放つ。</h2>
+
+    <div class="hero-meta">
+      <div class="hero-meta-label">★ NOW HIRING</div>
+      <h3>新しい中核チームを、ゼロから組成します。</h3>
+      <p>AI 時代に、自己効力感を持って働ける人を、最大限に増やす。<br>
+      そのための「AIベイカレント」を、共に作る仲間を本気で探しています。</p>
+    </div>
+
+    <div class="hero-roles">
+      <div class="hero-role-chip">CHRO / COO 候補</div>
+      <div class="hero-role-chip">Delivery Manager 候補</div>
+    </div>
+
+    <a href="#cta" class="hero-cta">まずは話を聞いてみる →</a>
+  </div>
+  <div class="hero-author">株式会社To22 ／ 代表取締役 野間 康平</div>
+</section>
+
+<!-- The Moment -->
+<section class="dark-deep">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 120px 40px;">
+    <div class="section-label">01. THE MOMENT</div>
+    <h2 class="section-title" style="color: var(--white);">今、めちゃくちゃ面白いタイミングが来ています。</h2>
+
+    <div class="moment-list">
+      <div class="moment-item">
+        <div class="moment-icon">💡</div>
+        <div class="moment-text">AI が、人間のポテンシャルを解き放つ時代がきた。</div>
+      </div>
+      <div class="moment-item">
+        <div class="moment-icon">📈</div>
+        <div class="moment-text">To22 は 3.5 年間、営業利益率 33% で黒字成長を続けてきた。</div>
+      </div>
+      <div class="moment-item">
+        <div class="moment-icon">🎯</div>
+        <div class="moment-text">74 社のエンタープライズ顧客と、323 案件の実績がある。</div>
+      </div>
+      <div class="moment-item">
+        <div class="moment-icon">🚀</div>
+        <div class="moment-text">そして今、¥100 億規模の事業基盤を目指し、第二創業期に入ります。</div>
+      </div>
+    </div>
+
+    <div class="moment-cta">
+      この歴史的な瞬間を、一緒に形にできる仲間を、本気で探しています。
+    </div>
+  </div>
+</section>
+
+<!-- Founder -->
+<section class="content-section" id="founder">
+  <div class="section-label">02. FOUNDER</div>
+  <h2 class="section-title">代表取締役  野間 康平</h2>
+  <p class="section-subtitle">京大 → BCG → To22 創業（2023 年）。Bootstrap で 3.5 年、黒字を継続してきました。</p>
+
+  <div class="founder-grid">
+    <div class="founder-card">
+      <div class="founder-avatar">👤</div>
+      <div class="founder-name">野間 康平</div>
+      <div class="founder-name-en">Kohei Noma</div>
+      <div class="founder-divider"></div>
+      <div class="founder-meta">
+        <div class="founder-meta-row">
+          <div class="founder-meta-label">代表</div>
+          <div class="founder-meta-value">株式会社 To22</div>
+        </div>
+        <div class="founder-meta-row">
+          <div class="founder-meta-label">出身</div>
+          <div class="founder-meta-value">京都大学 工学部 卒</div>
+        </div>
+        <div class="founder-meta-row">
+          <div class="founder-meta-label">前職</div>
+          <div class="founder-meta-value">Boston Consulting Group</div>
+        </div>
+        <div class="founder-meta-row" style="border: none;">
+          <div class="founder-meta-label">創業</div>
+          <div class="founder-meta-value">2023 年 1 月</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-highlights">
+      <div class="founder-highlight">
+        <div class="founder-highlight-label">学業</div>
+        <div class="founder-highlight-text">京都大学 工学部 ─ 論理的思考と工学的アプローチを習得</div>
+      </div>
+      <div class="founder-highlight">
+        <div class="founder-highlight-label">BCG 時代</div>
+        <div class="founder-highlight-text">Boston Consulting Group ─ 大手企業の戦略コンサルティング・新規事業開発を多数経験</div>
+      </div>
+      <div class="founder-highlight">
+        <div class="founder-highlight-label">起業前夜</div>
+        <div class="founder-highlight-text">ChatGPT 公開（2022.11）を起点に、生成 AI が知的労働を一変させると確信</div>
+      </div>
+      <div class="founder-highlight">
+        <div class="founder-highlight-label">創業</div>
+        <div class="founder-highlight-text">2023 年 1 月、株式会社 To22 創業 ─ 「人間の可能性を解き放つ」を掲げて</div>
+      </div>
+      <div class="founder-highlight">
+        <div class="founder-highlight-label">3.5 年経過</div>
+        <div class="founder-highlight-text">Bootstrap（借入ゼロ・出資ゼロ）で、営業利益率 33% を継続</div>
+      </div>
+      <div class="founder-highlight">
+        <div class="founder-highlight-label">いま</div>
+        <div class="founder-highlight-text">第二創業期、AI ベイカレント事業を立ち上げ、¥100 億規模の事業基盤を目指す</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Track Record -->
+<section class="content-section" style="background: var(--soft-bg);">
+  <div class="section-label">03. TRACK RECORD</div>
+  <h2 class="section-title">創業 3.5 年の経営実績</h2>
+  <p class="section-subtitle">派手な成長ではなく、Bootstrap で黒字を続けることを優先してきました。</p>
+
+  <div class="records-grid">
+    <div class="record-card">
+      <div class="record-title">無借金・無出資<br>で経営</div>
+      <div class="record-value">3.5年</div>
+      <div class="record-desc">Bootstrap で<br>持続的に運営</div>
+    </div>
+    <div class="record-card">
+      <div class="record-title">営業利益率<br>33% を維持</div>
+      <div class="record-value">33%</div>
+      <div class="record-desc">黒字経営を<br>継続できている</div>
+    </div>
+    <div class="record-card">
+      <div class="record-title">40 ヶ月連続<br>月次黒字</div>
+      <div class="record-value">40ヶ月</div>
+      <div class="record-desc">創業初月から<br>継続黒字</div>
+    </div>
+    <div class="record-card">
+      <div class="record-title">エンタープライズ<br>顧客 74 社</div>
+      <div class="record-value">74社</div>
+      <div class="record-desc">ナショナルクライアント<br>中心の信頼基盤</div>
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <div class="chart-title">▶ 年次売上推移（FY23-FY26）</div>
+    <div class="chart-bars">
+      <div class="chart-bar-wrap">
+        <div class="chart-bar-value">¥0.70億</div>
+        <div class="chart-bar" style="height: 56px;"></div>
+        <div class="chart-bar-label">FY23</div>
+        <div class="chart-bar-note">立ち上げ期</div>
+      </div>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar-value">¥1.60億</div>
+        <div class="chart-bar" style="height: 128px;"></div>
+        <div class="chart-bar-label">FY24</div>
+        <div class="chart-bar-note">拡大初期</div>
+      </div>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar-value">¥2.74億</div>
+        <div class="chart-bar highlight" style="height: 219px;"></div>
+        <div class="chart-bar-label">FY25</div>
+        <div class="chart-bar-note">黒字成長</div>
+      </div>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar-value">¥2.40億 / 7ヶ月</div>
+        <div class="chart-bar highlight" style="height: 192px; background: linear-gradient(to top, var(--red), var(--gold));"></div>
+        <div class="chart-bar-label">FY26</div>
+        <div class="chart-bar-note">前期通年比 87.6%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Issue -->
+<section class="content-section">
+  <div class="section-label">04. SOCIAL ISSUE</div>
+  <h2 class="section-title">日本社会が抱える構造的課題</h2>
+  <p class="section-subtitle">才能を持つ人々が活躍できる環境が整っておらず、社会が最適化されていません。</p>
+
+  <div class="talents-grid">
+    <div class="talent-card">
+      <div class="talent-icon">👶</div>
+      <div class="talent-title">育休復帰女性</div>
+      <div class="talent-phrase">時間・場所の制約で才能を発揮できない</div>
+      <div class="talent-scale">約400万人+</div>
+    </div>
+    <div class="talent-card">
+      <div class="talent-icon">🏡</div>
+      <div class="talent-title">子育て中ママ</div>
+      <div class="talent-phrase">家庭優先でキャリア継続困難</div>
+      <div class="talent-scale">約1,000万人+</div>
+    </div>
+    <div class="talent-card">
+      <div class="talent-icon">🗾</div>
+      <div class="talent-title">地方在住者</div>
+      <div class="talent-phrase">首都圏キャリアを地方で活かせず</div>
+      <div class="talent-scale">数百万人+</div>
+    </div>
+    <div class="talent-card">
+      <div class="talent-icon">🔄</div>
+      <div class="talent-title">リスキリング層</div>
+      <div class="talent-phrase">AI 時代に再起動を希望</div>
+      <div class="talent-scale">約600万人+</div>
+    </div>
+    <div class="talent-card">
+      <div class="talent-icon">🌅</div>
+      <div class="talent-title">副業希望ホワイトカラー</div>
+      <div class="talent-phrase">本業外で力を発揮したい</div>
+      <div class="talent-scale">数百万人+</div>
+    </div>
+  </div>
+
+  <div class="social-impact-msg">合計すると、日本には「1,800 万人規模の埋もれたポテンシャル」がある。</div>
+</section>
+
+<!-- Purpose -->
+<section class="dark-deep">
+  <div class="purpose-hero">
+    <div class="purpose-tag">OUR PURPOSE</div>
+    <div class="purpose-main">Unlock Your Potential.</div>
+    <div class="purpose-jp">人間の可能性を、解き放つ。</div>
+    <div class="purpose-text">
+      生成 AI は、我々の可能性を遥かに広げる可能性を持っている。<br>
+      時事刻々と技術が進化する AI 時代において、<br>
+      AI と人間の共存は、なくてはならないものになる。<br><br>
+      私たちは、AI の力で、<span class="highlight">眠っているすべての人の才能を解き放つ。</span>
+    </div>
+  </div>
+</section>
+
+<!-- Mission -->
+<section class="content-section">
+  <div class="section-label">05. OUR MISSION</div>
+  <h2 class="section-title">3 つの約束</h2>
+  <p class="section-subtitle">世界でいちばん「時間」を価値と幸福に変える会社になる。</p>
+
+  <div class="mission-grid">
+    <div class="mission-card">
+      <div class="mission-header">メンバーへ</div>
+      <div class="mission-icon">👤</div>
+      <div class="mission-body">
+        生成 AI と最適な働き方を武器に、<br>
+        場所や時間の制約を超えて<br>
+        才能を解放する。
+      </div>
+    </div>
+    <div class="mission-card">
+      <div class="mission-header">顧客へ</div>
+      <div class="mission-icon">🏢</div>
+      <div class="mission-body">
+        技術シーズや事業アイデアが<br>
+        「人手・時間・情報不足」で<br>
+        止まるボトルネックを取り除く。
+      </div>
+    </div>
+    <div class="mission-card">
+      <div class="mission-header">社会へ</div>
+      <div class="mission-icon">🌏</div>
+      <div class="mission-body">
+        「時間当たり付加価値」という<br>
+        新しい生産性指標を普及させ、<br>
+        日本の幸福度と競争力を底上げする。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Company / Existing Business -->
+<section class="content-section" style="background: var(--soft-bg);" id="company">
+  <div class="section-label">06. COMPANY</div>
+  <h2 class="section-title">株式会社 To22</h2>
+  <p class="section-subtitle">Bootstrap で着実に成長してきた、AI-BPO カンパニーです。</p>
+
+  <div class="company-grid">
+    <div class="info-block">
+      <h4>Company Information</h4>
+      <div class="info-list">
+        <div class="info-row"><div class="label">社名</div><div class="value">株式会社 To22</div></div>
+        <div class="info-row"><div class="label">代表者</div><div class="value">代表取締役 野間 康平</div></div>
+        <div class="info-row"><div class="label">設立</div><div class="value">2023 年 1 月</div></div>
+        <div class="info-row"><div class="label">資本金</div><div class="value">Bootstrap（借入・出資なし）</div></div>
+        <div class="info-row"><div class="label">所在地</div><div class="value">東京都中央区日本橋小舟町 8-13</div></div>
+        <div class="info-row"><div class="label">従業員数</div><div class="value">約 50 名（業務委託メンバー含む）</div></div>
+        <div class="info-row"><div class="label">コア人材</div><div class="value">子育て中チーム中心（女性中心の在宅組織）</div></div>
+        <div class="info-row"><div class="label">所属団体</div><div class="value">一般社団法人 生成 AI 活用普及協会（GUGA）</div></div>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <h4>4 つのサービスライン</h4>
+      <div class="services-list">
+        <div class="service-card blue">
+          <div class="service-name">Insighthub（AI 駆動リサーチ BPO）</div>
+          <div class="service-desc">調査工数▲70% / 納期 48h</div>
+        </div>
+        <div class="service-card navy">
+          <div class="service-name">Free Consultant Square（フリコン・プラットフォーム）</div>
+          <div class="service-desc">プロ人材 500 名+、戦コン経験者 80 名+</div>
+        </div>
+        <div class="service-card gold">
+          <div class="service-name">BRaiN BOOST（生成 AI 研修）</div>
+          <div class="service-desc">受講者の 8 割が日 30 分以上削減</div>
+        </div>
+        <div class="service-card red">
+          <div class="service-name">AI ベイカレント（AI 業務改善人材派遣 - 新規）</div>
+          <div class="service-desc">個人付きモデル × Pod 派遣</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Clients -->
+<section class="content-section">
+  <div class="section-label">07. CLIENT BASE</div>
+  <h2 class="section-title">信頼されている事実</h2>
+  <p class="section-subtitle">エンタープライズ中心の 74 社、累計 323 案件。ナショナルクライアント中心の高単価・継続取引ポートフォリオ。</p>
+
+  <div class="client-section">
+    <div class="client-section-title">▶ 研究開発・R&amp;D</div>
+    <div class="client-logos">
+      <div class="client-logo">SOLIZE</div>
+      <div class="client-logo">Kubota</div>
+      <div class="client-logo">House</div>
+      <div class="client-logo">前田道路</div>
+      <div class="client-logo">日本電設工業</div>
+      <div class="client-logo">SHISEIDO</div>
+      <div class="client-logo">コベルコ科研</div>
+      <div class="client-logo">大阪大学共創機構</div>
+    </div>
+  </div>
+
+  <div class="client-section">
+    <div class="client-section-title">▶ 新規事業開発</div>
+    <div class="client-logos">
+      <div class="client-logo">Nitto</div>
+      <div class="client-logo">FUJIFILM</div>
+      <div class="client-logo">NEC</div>
+      <div class="client-logo">鎌倉新書</div>
+      <div class="client-logo">KOBELCO</div>
+      <div class="client-logo">関西電力</div>
+      <div class="client-logo">HANWA</div>
+      <div class="client-logo">LIFULL</div>
+      <div class="client-logo">CASIO</div>
+      <div class="client-logo">NTT DATA</div>
+      <div class="client-logo">東武</div>
+    </div>
+  </div>
+
+  <div class="client-section">
+    <div class="client-section-title">▶ 投資ファンド（PE / VC / CVC）</div>
+    <div class="client-logos">
+      <div class="client-logo">DNP</div>
+      <div class="client-logo">伊藤忠</div>
+      <div class="client-logo">DG Daiwa Ventures</div>
+      <div class="client-logo">JP インベストメント</div>
+    </div>
+  </div>
+
+  <div class="client-section">
+    <div class="client-section-title">▶ 事業部 / 経営企画 / M&amp;A 推進</div>
+    <div class="client-logos">
+      <div class="client-logo">CBC</div>
+      <div class="client-logo">東急不動産</div>
+      <div class="client-logo">Kao</div>
+      <div class="client-logo">MIWA</div>
+      <div class="client-logo">YAMAHA</div>
+      <div class="client-logo">NEC ネクサ</div>
+      <div class="client-logo">DIGITAL GRID</div>
+      <div class="client-logo">Timee</div>
+      <div class="client-logo">KDDI</div>
+    </div>
+  </div>
+
+  <div class="client-section">
+    <div class="client-section-title">▶ 他コンサル / シンクタンク</div>
+    <div class="client-logos">
+      <div class="client-logo">ICR</div>
+      <div class="client-logo">RISE</div>
+      <div class="client-logo">KAIZEN PLATFORM</div>
+      <div class="client-logo">Goodpatch</div>
+      <div class="client-logo">MRI 三菱総合研究所</div>
+      <div class="client-logo">Pacific Consultants</div>
+      <div class="client-logo">ビザスク</div>
+      <div class="client-logo">日本財団</div>
+      <div class="client-logo">YCP Solidiance</div>
+    </div>
+  </div>
+</section>
+
+<!-- New Business -->
+<section class="content-section" style="background: var(--soft-bg);">
+  <div class="section-label">08. NEW BUSINESS</div>
+  <h2 class="section-title">AI ベイカレント</h2>
+  <p class="section-subtitle">「人に付くモデル」を主軸に、AI で業務を変革する次世代コンサル。</p>
+
+  <div class="new-biz-intro">
+    <div class="new-biz-intro-title">▶ AI ベイカレントとは</div>
+    <ul>
+      <li>大手・中堅企業の部長・課長に「個人付き」で、AI 業務改善 Worker を派遣するモデル</li>
+      <li>Insighthub で運営してきた『子育て中チーム』（女性）を中心に、同じセグメントで拡張</li>
+      <li>Worker は CCA 認定（To22 Claude Certified Architect）で品質保証 ─ リモート前提・在宅運営</li>
+    </ul>
+  </div>
+
+  <div class="biz-diff-grid">
+    <div class="diff-card">
+      <div class="diff-header">人に付く</div>
+      <div class="diff-icon">👥</div>
+      <div class="diff-body">
+        「組織」「プロジェクト」ではなく、<br>
+        部長・課長「個人」に付く。<br>
+        業務は人に紐づくから本質的。
+      </div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-header">AI で業務を磨く</div>
+      <div class="diff-icon">💡</div>
+      <div class="diff-body">
+        Worker が AI と一緒に、<br>
+        業務フロー設計と実装を行う。<br>
+        受託ではなく「実装」する。
+      </div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-header">子育て中チーム × リモート</div>
+      <div class="diff-icon">🌐</div>
+      <div class="diff-body">
+        Insighthub で運用してきた<br>
+        子育て中チームを核に拡張。<br>
+        育休復帰・地方・リスキリング層も。
+      </div>
+    </div>
+  </div>
+
+  <div class="biz-tagline">
+    ★これは「人材派遣」でも「コンサル」でもなく、新しいカテゴリ ─ 役職者の AI 化された右腕。
+  </div>
+</section>
+
+<!-- Transformation -->
+<section class="content-section">
+  <div class="section-label">09. TRANSFORMATION</div>
+  <h2 class="section-title">第二創業期</h2>
+  <p class="section-subtitle">子育て中チームの強みを活かしつつ、運営をスケール化していきます。</p>
+
+  <div class="transform-grid">
+    <div class="transform-card existing">
+      <div class="transform-header">既存：EPIC チーム（維持・発展）</div>
+      <div class="transform-body">
+        <div class="transform-section">
+          <div class="transform-section-title">▶ 事業</div>
+          <ul><li>Insighthub（AI 駆動リサーチ BPO）運営</li></ul>
+        </div>
+        <div class="transform-section">
+          <div class="transform-section-title">▶ チームの特徴</div>
+          <ul>
+            <li>子育て中の女性メンバーを中心に組成</li>
+            <li>個別事情に寄り添い、多様性を肯定</li>
+            <li>在宅・柔軟・週 3 日など、多様な働き方</li>
+          </ul>
+        </div>
+        <div class="transform-section">
+          <div class="transform-section-title">▶ 強み</div>
+          <ul><li>当事者目線・きめ細やかさ・継続力</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="plus">+</div>
+
+    <div class="transform-card new">
+      <div class="transform-header">新規：AI ベイカレントチーム（拡張組成）</div>
+      <div class="transform-body">
+        <div class="transform-section">
+          <div class="transform-section-title">▶ 事業</div>
+          <ul><li>AI ベイカレント（個人付き × Pod 派遣）</li></ul>
+        </div>
+        <div class="transform-section">
+          <div class="transform-section-title">▶ チームの土台</div>
+          <ul>
+            <li>子育て中チームの強みは継承</li>
+            <li>育休復帰・地方・リスキリング層にも拡張</li>
+            <li>SOP × AI × KPI で運営をスケール化</li>
+          </ul>
+        </div>
+        <div class="transform-section">
+          <div class="transform-section-title">▶ リーダーシップ</div>
+          <ul><li class="highlight">仕組み型（← 今回採用するポジション）</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="transform-msg">
+    ★ 子育て中チームの強みを核に、運営をスケール化する。それが、第二創業期。
+  </div>
+</section>
+
+<!-- Why You -->
+<section class="dark-deep">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 120px 40px;">
+    <div class="section-label">10. WHY YOU</div>
+    <h2 class="section-title" style="color: var(--white);">なぜ今、あなたの力が必要なのか。</h2>
+
+    <div style="display: flex; flex-direction: column; gap: 24px; margin-top: 48px;">
+      <div style="background: var(--navy-light); border: 1px solid var(--gold); padding: 32px; border-radius: 8px;">
+        <div style="display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: start;">
+          <div style="font-size: 48px; font-weight: 900; color: var(--gold); font-family: 'Inter', sans-serif;">01</div>
+          <div>
+            <div style="font-weight: 700; color: var(--gold-soft); font-size: 18px; margin-bottom: 12px;">既存メンバーだけでは、この新規事業は進められない。</div>
+            <div style="color: rgba(255,255,255,0.85); font-size: 14px; line-height: 1.8;">EPIC チームの文化は素晴らしい。だが、新しい AI ベイカレント事業は「別軸のチーム・別軸の文化」で組成する必要がある。既存を壊すのではなく、新軸を作る力を持つ人材が必要。</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: var(--navy-light); border: 1px solid var(--gold); padding: 32px; border-radius: 8px;">
+        <div style="display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: start;">
+          <div style="font-size: 48px; font-weight: 900; color: var(--gold); font-family: 'Inter', sans-serif;">02</div>
+          <div>
+            <div style="font-weight: 700; color: var(--gold-soft); font-size: 18px; margin-bottom: 12px;">AI の波は、もう二度と来ない。</div>
+            <div style="color: rgba(255,255,255,0.85); font-size: 14px; line-height: 1.8;">生成 AI が知的労働を根本から変える時代は、今この数年だけ。この波を捉えられなければ、10 年後に後悔することになる。捉える側に立つのか、眺める側で終わるのか。今、分かれ道にいる。</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: var(--navy-light); border: 1px solid var(--gold); padding: 32px; border-radius: 8px;">
+        <div style="display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: start;">
+          <div style="font-size: 48px; font-weight: 900; color: var(--gold); font-family: 'Inter', sans-serif;">03</div>
+          <div>
+            <div style="font-weight: 700; color: var(--gold-soft); font-size: 18px; margin-bottom: 12px;">あなたなら、社会の OS を書き換えられる。</div>
+            <div style="color: rgba(255,255,255,0.85); font-size: 14px; line-height: 1.8;">ビジネス的な成功の先にあるのは、「1,800 万人の原石を解き放つ社会インフラ」。仕組みを設計し、実装できる人が、この変化の震源地になります。あなたは、その一人になれるはず。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Open Roles -->
+<section class="content-section" id="roles">
+  <div class="section-label">11. OPEN ROLES</div>
+  <h2 class="section-title">募集ポジション</h2>
+  <p class="section-subtitle">AI ベイカレントを立ち上げる 2 つの中核ポジションを募集します。</p>
+
+  <div class="roles-grid">
+    <div class="role-card chro">
+      <div class="role-header">
+        <div class="role-number">01</div>
+        <div>
+          <div class="role-label">EXECUTIVE</div>
+          <div class="role-title">CHRO / COO 候補</div>
+          <div class="role-sub">〜 新チームの「設計者」 〜</div>
+        </div>
+      </div>
+      <div class="role-body">
+        <div class="role-main">
+          AI ベイカレントチームの<br>
+          「人・組織」全体設計図を描き、<br>
+          ファクトリーを構築する。
+        </div>
+        <div class="role-tasks-title">▶ 主な役割</div>
+        <ul class="role-tasks">
+          <li>採用・育成・評価・退職の全 SOP 設計</li>
+          <li>AI + 仕組みによる人材マネジメント自動化</li>
+          <li>スケーラブルな組織図の構築</li>
+          <li>カルチャー設計（パーパス浸透）</li>
+          <li>全社オペレーション統括</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role-card dm">
+      <div class="role-header">
+        <div class="role-number">02</div>
+        <div>
+          <div class="role-label">OPERATIONS</div>
+          <div class="role-title">Delivery Manager</div>
+          <div class="role-sub">〜 デリバリーの「工場長」 〜</div>
+        </div>
+      </div>
+      <div class="role-body">
+        <div class="role-main">
+          AI ベイカレント案件を<br>
+          標準プロセス × AI 活用で、<br>
+          高品質・高回転に回す。
+        </div>
+        <div class="role-tasks-title">▶ 主な役割</div>
+        <ul class="role-tasks">
+          <li>案件プロジェクト管理（10-30 Pod 並行）</li>
+          <li>AI 業務改善プロセスの標準化</li>
+          <li>Before/After 定量化フレーム運用</li>
+          <li>クライアント定期レポート品質管理</li>
+          <li>Worker 配置・稼働率の最適化</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mindset -->
+<section class="content-section" style="background: var(--soft-bg);">
+  <div class="section-label">12. MINDSET</div>
+  <h2 class="section-title">必須マインドセット</h2>
+  <p class="section-subtitle">スキルより、ここが決定的。パーパス × 工学的思考 × パッションの三位一体。</p>
+
+  <div class="mindset-grid">
+    <div class="mindset-card">
+      <div class="mindset-header">🔥</div>
+      <div class="mindset-title">パーパスに共感する</div>
+      <div class="mindset-body">
+        「原石を解き放つ」という<br>
+        社会変革への情熱を、<br>
+        自分の言葉で語れる人。
+      </div>
+    </div>
+    <div class="mindset-card">
+      <div class="mindset-header">⚙</div>
+      <div class="mindset-title">仕組みで解く</div>
+      <div class="mindset-body">
+        根性ではなく、<br>
+        SOP・プロンプト・システムで<br>
+        問題を解決できる人。
+      </div>
+    </div>
+    <div class="mindset-card">
+      <div class="mindset-header">📊</div>
+      <div class="mindset-title">数値で決める</div>
+      <div class="mindset-body">
+        感情・印象・関係性ではなく、<br>
+        KPI とデータで<br>
+        意思決定できる人。
+      </div>
+    </div>
+    <div class="mindset-card">
+      <div class="mindset-header">🤖</div>
+      <div class="mindset-title">AI に任せる</div>
+      <div class="mindset-body">
+        教育・ヒアリング・管理を、<br>
+        AI に任せる発想ができる。<br>
+        「AI にやらせるのが最速」。
+      </div>
+    </div>
+  </div>
+
+  <div class="mindset-msg">
+    ▶ この 4 つに 100% 共感できる方を探しています。妥協はしません。
+  </div>
+</section>
+
+<!-- Compensation -->
+<section class="content-section">
+  <div class="section-label">13. COMPENSATION</div>
+  <h2 class="section-title">処遇</h2>
+  <p class="section-subtitle">成果とリスクに見合う設計。固定 × 変動の構造で、パーパス実現への貢献に報います。</p>
+
+  <div class="comp-grid">
+    <div class="comp-card chro">
+      <div class="comp-header">CHRO / COO 候補</div>
+      <div class="comp-body">
+        <div class="comp-row"><div class="comp-label">基本年収</div><div class="comp-value">¥1,200 万 - ¥1,800 万</div></div>
+        <div class="comp-row"><div class="comp-label">業績連動賞与</div><div class="comp-value">年最大 ¥500 万（KPI 達成時）</div></div>
+        <div class="comp-row"><div class="comp-label">役位</div><div class="comp-value">執行役員候補（試用期間後に正式登用を検討）</div></div>
+        <div class="comp-row"><div class="comp-label">勤務形態</div><div class="comp-value">フルリモート可（週 1-2 回 東京出社推奨）</div></div>
+        <div class="comp-row"><div class="comp-label">試用期間</div><div class="comp-value">3 ヶ月（双方の適合性を確認）</div></div>
+        <div class="comp-row"><div class="comp-label">将来の処遇</div><div class="comp-value">成果次第で執行役員・取締役登用も検討</div></div>
+      </div>
+    </div>
+
+    <div class="comp-card dm">
+      <div class="comp-header">Delivery Manager</div>
+      <div class="comp-body">
+        <div class="comp-row"><div class="comp-label">基本年収</div><div class="comp-value">¥800 万 - ¥1,200 万</div></div>
+        <div class="comp-row"><div class="comp-label">業績連動賞与</div><div class="comp-value">年最大 ¥300 万（Pod KPI 達成時）</div></div>
+        <div class="comp-row"><div class="comp-label">役位</div><div class="comp-value">Delivery 本部長候補</div></div>
+        <div class="comp-row"><div class="comp-label">勤務形態</div><div class="comp-value">フルリモート可（週 1-2 回 東京出社推奨）</div></div>
+        <div class="comp-row"><div class="comp-label">試用期間</div><div class="comp-value">3 ヶ月</div></div>
+        <div class="comp-row"><div class="comp-label">将来の処遇</div><div class="comp-value">成果次第で本部長へ正式登用</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="content-section" style="background: var(--soft-bg);" id="process">
+  <div class="section-label">14. PROCESS</div>
+  <h2 class="section-title">選考プロセス</h2>
+  <p class="section-subtitle">4 ステップで最短 3 週間。双方向の見極めを重視します。</p>
+
+  <div class="process-grid">
+    <div class="process-card">
+      <div class="process-step">STEP 01</div>
+      <div class="process-title">カジュアル面談</div>
+      <div class="process-meta">👤 代表（野間） ／ ⏱ 60 分</div>
+      <div class="process-divider"></div>
+      <div class="process-content">パーパスへの共感と価値観の相互確認。本質的に合うかの初期チェック。</div>
+    </div>
+
+    <div class="process-card">
+      <div class="process-step">STEP 02</div>
+      <div class="process-title">課題提出 & ディスカッション</div>
+      <div class="process-meta">👤 代表 + 外部アドバイザー ／ ⏱ 120 分</div>
+      <div class="process-divider"></div>
+      <div class="process-content">「第二創業期の最初 90 日プラン」を策定し、一緒に議論。</div>
+    </div>
+
+    <div class="process-card">
+      <div class="process-step">STEP 03</div>
+      <div class="process-title">条件すり合わせ</div>
+      <div class="process-meta">👤 代表 + 顧問税理士 ／ ⏱ 90 分</div>
+      <div class="process-divider"></div>
+      <div class="process-content">報酬・入社日・権限範囲の詳細協議。</div>
+    </div>
+
+    <div class="process-card">
+      <div class="process-step">STEP 04</div>
+      <div class="process-title">オファー & 契約</div>
+      <div class="process-meta">👤 代表 ／ ⏱ —</div>
+      <div class="process-divider"></div>
+      <div class="process-content">正式オファー、契約書締結、入社準備。</div>
+    </div>
+  </div>
+
+  <div class="process-total">
+    ⏱ トータル期間：最短 3 週間 ／ 本気でマッチすれば、2 週間でのオファーも可能です
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-section" id="cta">
+  <div class="cta-inner">
+    <div class="cta-tag">CALL TO ACTION</div>
+    <h2 class="cta-title">新しいチームを、<br>一緒に作り上げませんか。</h2>
+
+    <div class="cta-body">
+      「AI 時代に、自己効力感を持って働ける人を、最大限に増やす。」<br>
+      これが、To22 が社会にもたらすインパクトであり、価値です。<br>
+      1,800 万人の「原石」が、日本社会に存在します。
+      <span class="accent">この人たちを AI 時代に解き放つインフラを、<br>新しいチームで、ゼロから作り上げる。</span>
+      この挑戦を共にしてくれる、最初の仲間を探しています。
+    </div>
+
+    <div class="cta-card">
+      <div class="cta-card-title">まずは野間と 1 時間、腹を割って話しませんか。</div>
+      <a href="mailto:claude@to22inc.com?subject=To22%20第二創業期%20採用エントリー&body=To22%20野間様%0A%0Aお世話になります。%0A採用サイトを拝見し、ぜひお話を伺いたくご連絡しました。%0A%0A▼お名前：%0A▼経歴概要：%0A▼関心ポジション：（CHRO/COO 候補 ／ Delivery Manager）%0A▼ご都合のよい日程（複数候補）：%0A%0Aどうぞよろしくお願いいたします。" class="cta-button">代表 野間と話す →</a>
+      <div class="cta-contact">
+        📧 <a href="mailto:claude@to22inc.com">claude@to22inc.com</a>
+      </div>
+      <div class="cta-signature">
+        株式会社 To22 ／ 代表取締役 野間 康平
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="logo">TO22</div>
+  <div>株式会社 To22 ／ 〒103-0024 東京都中央区日本橋小舟町 8-13</div>
+  <div>© 2026 To22 Inc. All rights reserved.</div>
+  <div class="links">
+    <a href="#hero">トップ</a>
+    <a href="#founder">代表</a>
+    <a href="#company">事業</a>
+    <a href="#roles">募集</a>
+    <a href="#cta">応募</a>
+  </div>
+</footer>
+
+<script>
+  // Scroll fade-in animation
+  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -100px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section.content-section, section.dark-deep, section.cta-section').forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+  });
+
+  // Update copyright year
+  const year = new Date().getFullYear();
+  document.querySelectorAll('footer').forEach(el => {
+    el.innerHTML = el.innerHTML.replace('2026', year);
+  });
+</script>
+
+</body>
+</html>

@@ -5,597 +5,577 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
-<title>To22 — Careers</title>
-<meta name="description" content="株式会社To22 採用情報。CHRO/COO候補・Delivery Manager候補を募集しています。">
+<title>To22 採用 - Unlock Your Potential</title>
+<meta name="description" content="株式会社To22 採用情報。より良い22世紀を創る仲間を募集しています。">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
 
 <style>
   :root {
-    --bg: #F5F2EC;
-    --bg-deep: #0E0E0E;
-    --bg-card: #FFFFFF;
-    --ink: #131313;
-    --ink-2: #3D3D3D;
-    --ink-3: #6E6E6E;
-    --ink-4: #9C9C9C;
-    --line: rgba(19, 19, 19, 0.1);
-    --line-2: rgba(19, 19, 19, 0.06);
-    --line-dark: rgba(255, 255, 255, 0.12);
-    --accent: #B8843E;
-    --accent-soft: rgba(184, 132, 62, 0.1);
-    --cream-on-dark: #E8E2D4;
+    --navy: #0F2D52;
+    --navy-deep: #0A1F3D;
+    --navy-light: #1E4577;
     --white: #FFFFFF;
+    --cream: #FAFAFA;
+    --gray-50: #F5F5F5;
+    --gray-100: #EAEAEA;
+    --gray-300: #B8B8B8;
+    --gray-500: #6E6E6E;
+    --gray-700: #3D3D3D;
+    --ink: #1A1A1A;
+    --red: #E63946;
+    --red-hover: #D32F3F;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
   body {
-    font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
+    font-family: 'Noto Sans JP', 'Inter', sans-serif;
     color: var(--ink);
-    line-height: 1.75;
-    font-weight: 400;
+    background: var(--white);
+    line-height: 1.8;
     font-feature-settings: "palt";
-    overflow-x: hidden;
   }
-  ::selection { background: var(--ink); color: var(--bg); }
-
-  .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
-  .en { font-family: 'Inter', sans-serif; letter-spacing: -0.01em; }
-
   a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--red); color: var(--white); }
 
   /* ============ NAV ============ */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 24px 40px;
+    padding: 20px 40px;
     display: flex; justify-content: space-between; align-items: center;
-    transition: background 0.3s, border 0.3s, padding 0.3s;
-    border-bottom: 1px solid transparent;
+    background: transparent;
+    transition: background 0.3s, padding 0.3s, box-shadow 0.3s;
   }
   nav.scrolled {
-    background: rgba(245, 242, 236, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--line);
-    padding: 16px 40px;
+    background: rgba(15, 45, 82, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 14px 40px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.1);
   }
   nav .brand {
+    display: flex; align-items: center; gap: 8px;
     font-family: 'Inter', sans-serif;
-    font-weight: 700; font-size: 18px;
-    letter-spacing: -0.02em; color: var(--ink);
+    font-weight: 700; font-size: 24px; color: var(--white);
+    letter-spacing: -0.02em;
   }
-  nav .menu { display: flex; gap: 32px; align-items: center; }
+  nav .brand .heart {
+    color: var(--white);
+    font-size: 22px;
+    transform: translateY(-2px);
+  }
+  nav .menu { display: flex; gap: 36px; align-items: center; }
   nav .menu a {
-    font-size: 13px; font-weight: 500; color: var(--ink-2);
-    transition: color 0.2s;
-  }
-  nav .menu a:hover { color: var(--ink); }
-  nav .menu a.contact {
-    background: var(--ink); color: var(--bg);
-    padding: 8px 18px; border-radius: 6px;
+    color: var(--white); font-size: 13px; font-weight: 500;
     transition: opacity 0.2s;
+    letter-spacing: 0.02em;
   }
-  nav .menu a.contact:hover { opacity: 0.85; color: var(--bg); }
+  nav .menu a:hover { opacity: 0.7; }
+  nav .menu a.contact {
+    background: var(--red); padding: 10px 22px;
+    border-radius: 4px; font-weight: 700;
+    transition: background 0.2s;
+  }
+  nav .menu a.contact:hover {
+    background: var(--red-hover); opacity: 1;
+  }
   @media (max-width: 720px) {
-    nav { padding: 18px 24px; }
-    nav.scrolled { padding: 14px 24px; }
+    nav { padding: 16px 20px; }
+    nav.scrolled { padding: 12px 20px; }
+    nav .brand { font-size: 20px; }
     nav .menu a:not(.contact) { display: none; }
   }
 
-  /* ============ LAYOUT PRIMITIVES ============ */
-  .container { max-width: 1240px; margin: 0 auto; padding: 0 40px; }
-  .container-narrow { max-width: 760px; margin: 0 auto; padding: 0 40px; }
-  @media (max-width: 720px) {
-    .container, .container-narrow { padding: 0 24px; }
-  }
-
-  .eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--ink-3); margin-bottom: 32px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .eyebrow::before {
-    content: ''; width: 24px; height: 1px; background: var(--ink-4);
-  }
-  .dark .eyebrow { color: var(--ink-4); }
-  .dark .eyebrow::before { background: var(--ink-4); }
-
   /* ============ HERO ============ */
   .hero {
-    min-height: 100vh; display: flex; flex-direction: column;
+    min-height: 100vh; position: relative; overflow: hidden;
+    background: var(--navy);
+    display: flex; flex-direction: column;
     justify-content: center;
-    padding: 160px 40px 80px;
-    border-bottom: 1px solid var(--line);
-    position: relative;
+    padding: 120px 40px 80px;
   }
-  @media (max-width: 720px) {
-    .hero { padding: 140px 24px 60px; }
+  .hero-bg {
+    position: absolute; inset: 0; opacity: 0.18;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
   }
-  .hero-inner { max-width: 1240px; width: 100%; margin: 0 auto; }
+  .hero-bg::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 30%, rgba(230, 57, 70, 0.15) 0%, transparent 40%),
+      radial-gradient(ellipse at 75% 70%, rgba(30, 69, 119, 0.5) 0%, transparent 50%);
+  }
+  /* Tech circuit lines */
+  .hero-circuit {
+    position: absolute; inset: 0; opacity: 0.3;
+    background-image:
+      radial-gradient(circle at 20% 25%, var(--white) 1.5px, transparent 1.5px),
+      radial-gradient(circle at 80% 35%, var(--white) 1.5px, transparent 1.5px),
+      radial-gradient(circle at 35% 75%, var(--red) 2px, transparent 2px),
+      radial-gradient(circle at 65% 65%, var(--white) 1.5px, transparent 1.5px),
+      radial-gradient(circle at 50% 90%, var(--white) 1.5px, transparent 1.5px);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .hero-inner {
+    max-width: 1240px; width: 100%; margin: 0 auto;
+    position: relative; z-index: 2;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    color: var(--red);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-bottom: 40px;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 32px; height: 2px; background: var(--red);
+  }
   .hero h1 {
-    font-size: clamp(48px, 9vw, 132px);
-    font-weight: 500;
-    line-height: 1.0; letter-spacing: -0.045em;
-    color: var(--ink); margin-bottom: 56px;
-    max-width: 12ch;
+    font-family: 'Oswald', 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(56px, 12vw, 160px);
+    line-height: 1.0; letter-spacing: 0.01em;
+    color: var(--white); margin-bottom: 32px;
+    text-transform: uppercase;
   }
-  .hero h1 .accent { color: var(--accent); }
-
+  .hero h1 .accent { color: var(--red); }
+  .hero-jp {
+    font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+    font-size: clamp(20px, 3vw, 32px); font-weight: 700;
+    color: var(--white); margin-bottom: 64px;
+    letter-spacing: 0.05em;
+  }
   .hero-meta {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 80px; align-items: end;
-    padding-top: 64px; border-top: 1px solid var(--line);
-  }
-  @media (max-width: 880px) {
-    .hero-meta { grid-template-columns: 1fr; gap: 40px; }
-  }
-  .hero-meta-block { max-width: 480px; }
-  .hero-meta-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--ink-3); margin-bottom: 16px;
-  }
-  .hero-meta-text {
-    font-size: 16px; line-height: 1.7;
-    color: var(--ink-2);
+    display: flex; flex-wrap: wrap; gap: 32px;
+    align-items: center;
+    padding-top: 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
   }
   .hero-cta {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: var(--ink); color: var(--bg);
-    padding: 18px 32px; border-radius: 8px;
-    font-size: 15px; font-weight: 600;
-    transition: opacity 0.2s, transform 0.2s;
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--red); color: var(--white);
+    padding: 20px 44px; border-radius: 4px;
+    font-size: 16px; font-weight: 700;
+    transition: background 0.2s, transform 0.2s;
+    letter-spacing: 0.05em;
   }
-  .hero-cta:hover { opacity: 0.9; transform: translateY(-1px); }
-  .hero-cta svg {
-    width: 16px; height: 16px; transition: transform 0.2s;
+  .hero-cta:hover { background: var(--red-hover); transform: translateY(-2px); }
+  .hero-cta svg { width: 16px; height: 16px; transition: transform 0.2s; }
+  .hero-cta:hover svg { transform: translateX(4px); }
+  .hero-meta-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px; max-width: 500px;
+    line-height: 1.7;
   }
-  .hero-cta:hover svg { transform: translateX(3px); }
 
-  /* ============ SECTION COMMON ============ */
-  section { padding: 140px 0; border-bottom: 1px solid var(--line); }
-  @media (max-width: 720px) { section { padding: 100px 0; } }
-  .dark { background: var(--bg-deep); color: var(--cream-on-dark); border-bottom: 1px solid var(--line-dark); }
-  .dark h2, .dark h3 { color: var(--white); }
+  /* ============ SECTION TITLE COMMON ============ */
+  .section-title-block {
+    text-align: center; margin-bottom: 80px;
+  }
   .section-title {
-    font-size: clamp(34px, 5vw, 60px);
-    font-weight: 500; line-height: 1.15;
-    letter-spacing: -0.03em;
-    margin-bottom: 32px; max-width: 18ch;
-    color: var(--ink);
+    font-family: 'Oswald', 'Inter', sans-serif;
+    font-weight: 700; font-size: clamp(36px, 5vw, 56px);
+    color: var(--ink); letter-spacing: 0.02em;
+    margin-bottom: 8px; text-transform: uppercase;
+    line-height: 1.1;
   }
   .dark .section-title { color: var(--white); }
-  .section-lead {
-    font-size: clamp(17px, 1.6vw, 20px);
-    line-height: 1.7; color: var(--ink-2);
-    max-width: 640px;
+  .section-subtitle {
+    display: inline-flex; align-items: center; gap: 16px;
+    font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+    font-size: 14px; font-weight: 500;
+    color: var(--gray-500); letter-spacing: 0.2em;
   }
-  .dark .section-lead { color: var(--cream-on-dark); opacity: 0.85; }
+  .section-subtitle::before, .section-subtitle::after {
+    content: ''; width: 32px; height: 1px; background: var(--gray-300);
+  }
+  .dark .section-subtitle { color: var(--gray-300); }
+  .dark .section-subtitle::before, .dark .section-subtitle::after {
+    background: var(--gray-500);
+  }
 
-  /* ============ STATS ============ */
-  .stats { padding: 100px 0; background: var(--bg-deep); color: var(--white); border-bottom: 1px solid var(--line-dark); }
-  .stats .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px; }
-  @media (max-width: 880px) { .stats .container { grid-template-columns: repeat(2, 1fr); gap: 48px 40px; } }
-  .stat-item .num {
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(52px, 7vw, 88px);
-    font-weight: 400; letter-spacing: -0.04em;
-    line-height: 1; color: var(--white);
-    margin-bottom: 16px;
+  /* ============ SECTIONS ============ */
+  section {
+    padding: 140px 40px;
+    position: relative;
   }
-  .stat-item .num .unit {
-    font-size: 0.45em; color: var(--ink-4); font-weight: 400;
-    margin-left: 4px;
+  .dark { background: var(--navy); color: var(--white); }
+  .dark.tech-bg {
+    background:
+      linear-gradient(rgba(15, 45, 82, 0.95), rgba(15, 45, 82, 0.95)),
+      radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 1px, transparent 1px),
+      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: cover, 80px 80px, 60px 60px;
   }
-  .stat-item .label {
-    font-size: 14px; color: var(--ink-4);
+  .dark.tech-bg::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  @media (max-width: 720px) {
+    section { padding: 100px 24px; }
+  }
+  .inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+  .inner-narrow { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+
+  /* ============ MISSION ============ */
+  .mission {
+    background: var(--white);
+    text-align: center;
+  }
+  .mission-body {
+    margin-top: 0;
+  }
+  .mission-statement {
+    font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700; line-height: 1.55;
+    color: var(--ink); margin-bottom: 56px;
+    letter-spacing: 0.02em;
+  }
+  .mission-statement .accent { color: var(--red); }
+  .mission-text {
+    font-size: 17px; line-height: 2.1; color: var(--gray-700);
+    max-width: 720px; margin: 0 auto 28px;
+  }
+  .mission-text strong { color: var(--ink); font-weight: 700; }
+
+  /* ============ VISION (22世紀) ============ */
+  .vision {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .vision::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .vision::after {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 40%, rgba(230, 57, 70, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 60%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .vision-massive {
+    font-family: 'Oswald', 'Inter', sans-serif;
+    font-weight: 700; font-size: clamp(64px, 14vw, 200px);
+    color: var(--white); line-height: 0.95;
+    letter-spacing: 0.01em; margin-bottom: 32px;
+    text-transform: uppercase;
+  }
+  .vision-massive .accent { color: var(--red); }
+  .vision-line {
+    width: 64px; height: 3px; background: var(--red);
+    margin: 0 auto 48px;
+  }
+  .vision-headline {
+    font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+    font-size: clamp(28px, 4vw, 42px); font-weight: 700;
+    color: var(--white); margin-bottom: 56px;
     line-height: 1.5;
   }
-
-  /* ============ FOUNDER ============ */
-  .founder .container { display: grid; grid-template-columns: 380px 1fr; gap: 100px; }
-  @media (max-width: 880px) { .founder .container { grid-template-columns: 1fr; gap: 56px; } }
-  .founder-side {
-    position: sticky; top: 120px; align-self: start;
-  }
-  @media (max-width: 880px) { .founder-side { position: static; } }
-  .founder-photo {
-    aspect-ratio: 3/4;
-    background:
-      radial-gradient(ellipse at 30% 30%, #1a1a1a 0%, transparent 50%),
-      radial-gradient(ellipse at 70% 70%, var(--accent) 0%, transparent 60%),
-      #0A0A0A;
-    border-radius: 4px;
-    display: flex; align-items: flex-end;
-    padding: 32px;
-    margin-bottom: 24px;
-    position: relative; overflow: hidden;
-  }
-  .founder-photo::after {
-    content: 'N';
-    position: absolute;
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
-    font-family: 'Inter', sans-serif;
-    font-size: 200px; font-weight: 200;
-    color: rgba(255, 255, 255, 0.1);
-    line-height: 1;
-  }
-  .founder-photo-label {
-    position: relative; z-index: 1;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; color: rgba(255, 255, 255, 0.6);
-    letter-spacing: 0.1em;
-  }
-  .founder-info-name {
-    font-size: 18px; font-weight: 600;
-    color: var(--ink); margin-bottom: 4px;
-  }
-  .founder-info-role {
-    font-size: 13px; color: var(--ink-3);
-    margin-bottom: 16px;
-  }
-  .founder-tags {
-    display: flex; gap: 6px; flex-wrap: wrap;
-  }
-  .founder-tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; color: var(--ink-2);
-    padding: 4px 10px; border: 1px solid var(--line);
-    border-radius: 100px;
-  }
-
-  .founder-body { padding-top: 16px; }
-  .founder-body p {
-    font-size: 18px; line-height: 1.85; color: var(--ink-2);
-    margin-bottom: 28px; max-width: 660px;
-  }
-  .founder-body p strong { color: var(--ink); font-weight: 600; }
-  .pull-quote {
-    margin: 56px 0;
-    padding-left: 24px;
-    border-left: 2px solid var(--accent);
-    font-size: clamp(22px, 2.5vw, 28px);
-    font-weight: 500; line-height: 1.5;
-    color: var(--ink); max-width: 660px;
-  }
-  .signature {
-    margin-top: 56px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px; color: var(--ink-3);
-  }
-
-  /* ============ VISION ============ */
-  .vision {
-    padding: 200px 40px;
-    text-align: center; background: var(--bg-deep);
-    color: var(--white); border-bottom: 1px solid var(--line-dark);
-  }
-  .vision-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--ink-4);
-    margin-bottom: 48px;
-  }
-  .vision-statement {
-    font-size: clamp(48px, 9vw, 132px);
-    font-weight: 400; line-height: 0.95;
-    letter-spacing: -0.04em; color: var(--white);
-    margin-bottom: 32px;
-  }
-  .vision-statement .accent { color: var(--accent); }
-  .vision-jp {
-    font-size: clamp(18px, 2vw, 24px);
-    color: var(--cream-on-dark); opacity: 0.7;
-    font-weight: 400; margin-bottom: 64px;
-  }
-  .vision-divider {
-    width: 32px; height: 1px;
-    background: var(--ink-4);
-    margin: 0 auto 64px;
-  }
   .vision-text {
-    max-width: 620px; margin: 0 auto;
-    font-size: 17px; line-height: 1.95;
-    color: var(--cream-on-dark); opacity: 0.85;
+    max-width: 720px; margin: 0 auto;
+    font-size: 17px; line-height: 2.1;
+    color: rgba(255, 255, 255, 0.85);
     text-align: left;
   }
+  .vision-text strong { color: var(--white); font-weight: 700; }
 
-  /* ============ BUSINESS ============ */
-  .business .container {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 100px; align-items: start;
+  /* ============ FOUNDER ============ */
+  .founder { background: var(--cream); }
+  .founder-content {
+    display: grid; grid-template-columns: 320px 1fr;
+    gap: 80px; align-items: start;
+    margin-top: 64px;
   }
   @media (max-width: 880px) {
-    .business .container { grid-template-columns: 1fr; gap: 48px; }
+    .founder-content { grid-template-columns: 1fr; gap: 48px; }
   }
-  .business-body p {
-    font-size: 18px; line-height: 1.85;
-    color: var(--ink-2); margin-bottom: 24px;
+  .founder-card {
+    background: var(--white);
+    padding: 40px 32px; text-align: center;
+    border: 1px solid var(--gray-100);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   }
-  .business-body p strong { color: var(--ink); font-weight: 600; }
-  .business-list {
-    margin-top: 56px;
-    border-top: 1px solid var(--line);
+  .founder-photo {
+    width: 160px; height: 160px; margin: 0 auto 24px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 64px; font-weight: 500; color: var(--white);
+    letter-spacing: -0.02em;
   }
-  .business-item {
-    display: grid; grid-template-columns: 60px 1fr;
-    gap: 32px; padding: 32px 0;
-    border-bottom: 1px solid var(--line);
+  .founder-name {
+    font-size: 22px; font-weight: 700;
+    color: var(--ink); margin-bottom: 4px;
   }
-  @media (max-width: 720px) {
-    .business-item { grid-template-columns: 1fr; gap: 8px; }
+  .founder-name-en {
+    font-family: 'Inter', sans-serif;
+    color: var(--gray-500); font-size: 13px;
+    margin-bottom: 20px; letter-spacing: 0.05em;
   }
-  .business-item-num {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px; color: var(--ink-3);
-    padding-top: 4px;
+  .founder-divider {
+    width: 32px; height: 2px; background: var(--red);
+    margin: 0 auto 20px;
   }
-  .business-item-body h3 {
-    font-size: 22px; font-weight: 600;
-    color: var(--ink); margin-bottom: 8px;
+  .founder-role {
+    font-size: 13px; color: var(--gray-500);
+    margin-bottom: 20px; line-height: 1.6;
   }
-  .business-item-body p {
-    font-size: 15px; color: var(--ink-3);
-    line-height: 1.7; max-width: 540px;
+  .founder-tags {
+    display: flex; gap: 6px; flex-wrap: wrap; justify-content: center;
   }
-
-  /* ============ CLIENT LIST ============ */
-  .clients { padding: 100px 0; border-bottom: 1px solid var(--line); }
-  .clients .container { display: grid; grid-template-columns: 320px 1fr; gap: 80px; align-items: start; }
-  @media (max-width: 880px) {
-    .clients .container { grid-template-columns: 1fr; gap: 32px; }
+  .founder-tag {
+    background: var(--gray-50); padding: 5px 12px;
+    border-radius: 100px; font-size: 11px;
+    color: var(--gray-700); font-weight: 600;
   }
-  .clients-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--ink-3);
-    margin-bottom: 16px;
+  .founder-body { padding-top: 8px; }
+  .founder-body p {
+    font-size: 16px; line-height: 2.0; color: var(--gray-700);
+    margin-bottom: 24px;
   }
-  .clients-headline {
-    font-size: 20px; font-weight: 500;
-    color: var(--ink); line-height: 1.5;
+  .founder-body p strong { color: var(--ink); font-weight: 700; }
+  .founder-quote {
+    font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+    font-size: clamp(20px, 2.5vw, 26px);
+    font-weight: 700; line-height: 1.6;
+    color: var(--navy); margin: 48px 0;
+    padding: 24px 0 24px 28px;
+    border-left: 4px solid var(--red);
   }
-  .clients-headline strong { color: var(--accent); font-weight: 600; }
-  .clients-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 0;
-    border-top: 1px solid var(--line);
-    border-left: 1px solid var(--line);
-  }
-  .clients-grid div {
-    padding: 24px 16px; text-align: center;
-    color: var(--ink-2); font-size: 13px;
-    font-weight: 500;
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+  .founder-signature {
+    margin-top: 40px; font-style: italic;
+    color: var(--gray-500); font-size: 14px;
   }
 
-  /* ============ ROLES ============ */
-  .roles .container {
-    display: grid; grid-template-columns: 380px 1fr;
-    gap: 100px; align-items: start;
+  /* ============ PHILOSOPHY (AIと人間の共存) ============ */
+  .philosophy {
+    background: var(--white);
+  }
+  .philosophy-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 32px; margin-top: 64px;
   }
   @media (max-width: 880px) {
-    .roles .container { grid-template-columns: 1fr; gap: 48px; }
+    .philosophy-grid { grid-template-columns: 1fr; gap: 24px; }
   }
-  .roles-list { display: flex; flex-direction: column; gap: 0; }
+  .philosophy-card {
+    padding: 48px 32px; text-align: center;
+    border: 1px solid var(--gray-100);
+    background: var(--cream);
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+  .philosophy-card:hover {
+    border-color: var(--red);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(230, 57, 70, 0.12);
+  }
+  .philosophy-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px; font-weight: 700;
+    color: var(--red); line-height: 1;
+    margin-bottom: 20px;
+  }
+  .philosophy-title {
+    font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+    font-size: 22px; font-weight: 700;
+    color: var(--ink); margin-bottom: 16px;
+    line-height: 1.4;
+  }
+  .philosophy-text {
+    font-size: 14px; line-height: 1.85;
+    color: var(--gray-700);
+  }
+
+  /* ============ ROLES (light) ============ */
+  .roles {
+    background: var(--cream);
+  }
+  .role-list {
+    margin-top: 64px;
+    display: grid; gap: 24px;
+  }
   .role {
-    padding: 56px 0;
-    border-top: 1px solid var(--line);
-    display: grid; grid-template-columns: 60px 1fr;
-    gap: 32px;
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: 8px;
+    padding: 48px;
+    display: grid; grid-template-columns: 80px 1fr auto;
+    gap: 40px; align-items: center;
+    transition: all 0.3s;
   }
-  .role:last-child { border-bottom: 1px solid var(--line); }
+  .role:hover {
+    border-color: var(--navy);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(15, 45, 82, 0.08);
+  }
   @media (max-width: 720px) {
-    .role { grid-template-columns: 1fr; gap: 16px; }
+    .role { grid-template-columns: 1fr; gap: 16px; padding: 32px 24px; }
   }
   .role-num {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px; color: var(--ink-3);
+    font-family: 'Oswald', sans-serif;
+    font-size: 56px; font-weight: 500;
+    color: var(--red); line-height: 1;
   }
-  .role-cat {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--accent);
-    margin-bottom: 12px;
-  }
-  .role-title {
-    font-size: clamp(28px, 3.5vw, 40px);
-    font-weight: 500; letter-spacing: -0.02em;
-    line-height: 1.2; color: var(--ink);
-    margin-bottom: 16px;
-  }
-  .role-sub {
-    font-size: 15px; color: var(--ink-3);
-    margin-bottom: 32px;
-  }
-  .role-mission {
-    font-size: 17px; line-height: 1.7;
-    color: var(--ink-2); padding: 24px 0;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 32px;
-  }
-  .role-mission strong { color: var(--ink); font-weight: 600; }
-  .role-section-title {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-3);
-    margin-bottom: 16px;
-  }
-  .role-tasks { list-style: none; margin-bottom: 32px; }
-  .role-tasks li {
-    padding: 10px 0; font-size: 15px;
-    color: var(--ink-2); line-height: 1.6;
-    display: flex; gap: 16px;
-  }
-  .role-tasks li::before {
-    content: '—'; color: var(--ink-4);
-    flex-shrink: 0;
-  }
-  .role-comp {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 32px; padding-top: 24px;
-    border-top: 1px solid var(--line);
-  }
-  .role-comp-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-3);
+  .role-content h3 {
+    font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+    font-size: 24px; font-weight: 700; color: var(--ink);
     margin-bottom: 8px;
   }
-  .role-comp-value {
-    font-size: 16px; font-weight: 600;
-    color: var(--ink);
+  .role-content .role-sub {
+    font-size: 13px; color: var(--gray-500); margin-bottom: 12px;
   }
+  .role-content p {
+    font-size: 14px; color: var(--gray-700); line-height: 1.7;
+    max-width: 560px;
+  }
+  .role-arrow {
+    color: var(--red); font-size: 20px;
+    transition: transform 0.2s;
+  }
+  .role:hover .role-arrow { transform: translateX(8px); }
 
   /* ============ MINDSET ============ */
-  .mindset .container { display: grid; grid-template-columns: 380px 1fr; gap: 100px; align-items: start; }
-  @media (max-width: 880px) {
-    .mindset .container { grid-template-columns: 1fr; gap: 48px; }
+  .mindset {
+    background: var(--white);
   }
   .mindset-list {
-    border-top: 1px solid var(--line);
+    margin-top: 64px;
+    max-width: 720px; margin-left: auto; margin-right: auto;
   }
   .mindset-item {
-    padding: 40px 0;
-    border-bottom: 1px solid var(--line);
-    display: grid; grid-template-columns: 60px 1fr;
-    gap: 32px; align-items: baseline;
+    display: grid; grid-template-columns: 80px 1fr;
+    gap: 32px; padding: 32px 0;
+    border-bottom: 1px solid var(--gray-100);
+    align-items: baseline;
   }
+  .mindset-item:last-child { border-bottom: none; }
   @media (max-width: 720px) {
     .mindset-item { grid-template-columns: 1fr; gap: 8px; }
   }
   .mindset-num {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px; color: var(--ink-3);
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px; font-weight: 500;
+    color: var(--red); line-height: 1;
   }
   .mindset-title {
-    font-size: clamp(20px, 2.2vw, 26px);
-    font-weight: 500; color: var(--ink);
-    margin-bottom: 12px; letter-spacing: -0.01em;
+    font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--ink); margin-bottom: 8px;
   }
   .mindset-text {
-    font-size: 15px; line-height: 1.7;
-    color: var(--ink-3); max-width: 580px;
+    font-size: 14px; line-height: 1.85;
+    color: var(--gray-700);
   }
-
-  /* ============ PROCESS ============ */
-  .process .container { display: grid; grid-template-columns: 380px 1fr; gap: 100px; align-items: start; }
-  @media (max-width: 880px) {
-    .process .container { grid-template-columns: 1fr; gap: 48px; }
-  }
-  .process-list {
-    border-top: 1px solid var(--line);
-  }
-  .process-item {
-    padding: 32px 0;
-    border-bottom: 1px solid var(--line);
-    display: grid; grid-template-columns: 60px 140px 1fr;
-    gap: 32px; align-items: baseline;
-  }
-  @media (max-width: 720px) {
-    .process-item { grid-template-columns: 1fr; gap: 8px; }
-  }
-  .process-num {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px; color: var(--accent);
-  }
-  .process-time {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px; color: var(--ink-3);
-    letter-spacing: 0.05em;
-  }
-  .process-title {
-    font-size: 18px; font-weight: 600;
-    color: var(--ink); margin-bottom: 6px;
-  }
-  .process-text {
-    font-size: 14px; color: var(--ink-3); line-height: 1.6;
-  }
-  .process-note {
-    margin-top: 32px; font-size: 14px;
-    color: var(--ink-3); font-style: italic;
-  }
-  .process-note strong { color: var(--accent); font-weight: 600; font-style: normal; }
 
   /* ============ CTA ============ */
   .cta-section {
-    padding: 180px 40px; background: var(--bg-deep);
-    color: var(--white); text-align: center;
+    background: var(--navy);
+    padding: 160px 40px;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .cta-section::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, rgba(230, 57, 70, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .cta-inner {
+    max-width: 760px; margin: 0 auto;
+    position: relative; z-index: 1;
   }
   .cta-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--ink-4);
-    margin-bottom: 48px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.3em; color: var(--red);
+    margin-bottom: 32px;
   }
   .cta-headline {
-    font-size: clamp(40px, 7vw, 92px);
-    font-weight: 400; line-height: 1.0;
-    letter-spacing: -0.04em; color: var(--white);
-    margin-bottom: 48px; max-width: 12ch;
-    margin-left: auto; margin-right: auto;
+    font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 700; line-height: 1.4;
+    color: var(--white); margin-bottom: 32px;
   }
-  .cta-headline .accent { color: var(--accent); }
+  .cta-headline .accent { color: var(--red); }
   .cta-text {
-    max-width: 560px; margin: 0 auto 64px;
-    font-size: 17px; line-height: 1.85;
-    color: var(--cream-on-dark); opacity: 0.85;
+    font-size: 16px; line-height: 2.0;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 56px;
   }
   .cta-button {
     display: inline-flex; align-items: center; gap: 12px;
-    background: var(--white); color: var(--bg-deep);
-    padding: 22px 44px; border-radius: 8px;
-    font-size: 15px; font-weight: 600;
-    transition: transform 0.2s;
+    background: var(--red); color: var(--white);
+    padding: 22px 56px; border-radius: 4px;
+    font-size: 16px; font-weight: 700;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+    margin-bottom: 32px;
   }
-  .cta-button:hover { transform: translateY(-1px); color: var(--bg-deep); }
+  .cta-button:hover {
+    background: var(--red-hover); transform: translateY(-2px);
+    color: var(--white);
+  }
   .cta-button svg { width: 16px; height: 16px; transition: transform 0.2s; }
-  .cta-button:hover svg { transform: translateX(3px); }
-  .cta-meta {
-    margin-top: 56px; font-size: 13px;
-    color: var(--ink-4);
-    font-family: 'JetBrains Mono', monospace;
+  .cta-button:hover svg { transform: translateX(4px); }
+  .cta-contact {
+    color: rgba(255, 255, 255, 0.6); font-size: 13px;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.05em;
   }
-  .cta-meta a {
-    color: var(--cream-on-dark); text-decoration: underline;
+  .cta-contact a {
+    color: var(--white); text-decoration: underline;
     text-underline-offset: 4px;
   }
 
   /* ============ FOOTER ============ */
   footer {
-    background: var(--bg-deep); color: var(--ink-4);
-    padding: 60px 40px;
-    border-top: 1px solid var(--line-dark);
-  }
-  footer .container {
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 24px;
+    background: var(--navy-deep);
+    padding: 48px 40px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 12px;
   }
   footer .brand {
-    font-family: 'Inter', sans-serif; font-weight: 700;
-    font-size: 16px; letter-spacing: -0.02em;
-    color: var(--white);
+    color: var(--white); font-weight: 700;
+    font-size: 20px; letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
   }
-  footer .meta {
-    font-size: 12px;
-    font-family: 'JetBrains Mono', monospace;
-    letter-spacing: 0.05em;
-  }
+  footer p { margin: 4px 0; line-height: 1.8; }
 
   /* ============ REVEAL ============ */
-  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1s ease, transform 1s ease; }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.9s, transform 0.9s; }
   .reveal.in { opacity: 1; transform: translateY(0); }
 </style>
 </head>
@@ -603,436 +583,309 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#" class="brand">To22</a>
+  <a href="#" class="brand">To<span class="heart">♡</span></a>
   <div class="menu">
-    <a href="#about">About</a>
+    <a href="#mission">Mission</a>
     <a href="#vision">Vision</a>
+    <a href="#founder">Founder</a>
     <a href="#roles">Roles</a>
-    <a href="#process">Process</a>
     <a href="#cta" class="contact">Contact</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-circuit"></div>
   <div class="hero-inner">
-    <div class="eyebrow">Now Hiring / Second Founding</div>
+    <div class="hero-eyebrow">NOW HIRING / SECOND FOUNDING</div>
     <h1>
       Unlock<br>
-      your<br>
-      <span class="accent">potential.</span>
+      Your<br>
+      <span class="accent">Potential.</span>
     </h1>
+    <div class="hero-jp">人間の可能性を、解き放つ。</div>
+
     <div class="hero-meta">
-      <div class="hero-meta-block">
-        <div class="hero-meta-label">About this page</div>
-        <p class="hero-meta-text">
-          株式会社To22は、Bootstrap で 3.5 年間黒字を続けてきたコンサルティングカンパニーです。
-          いま、AI 時代の人材インフラを作る「第二創業期」に入ります。
-          その中核となるチームを、ゼロから組成します。
-        </p>
-      </div>
-      <div class="hero-meta-block">
-        <a href="#cta" class="hero-cta">
-          話を聞く
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+      <a href="#cta" class="hero-cta">
+        話を聞く
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div class="hero-meta-text">
+        より良い 22 世紀を、共に創る仲間を募集しています。
       </div>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
-<section class="stats">
-  <div class="container">
-    <div class="stat-item">
-      <div class="num en">74<span class="unit">社</span></div>
-      <div class="label">エンタープライズ顧客</div>
+<!-- MISSION -->
+<section class="mission" id="mission">
+  <div class="inner-narrow">
+    <div class="section-title-block">
+      <h2 class="section-title">Mission</h2>
+      <div class="section-subtitle">ミッション</div>
     </div>
-    <div class="stat-item">
-      <div class="num en">323<span class="unit"></span></div>
-      <div class="label">累計成約案件</div>
+
+    <div class="mission-body">
+      <div class="mission-statement">
+        AI 時代における<br>
+        個人の<span class="accent">知的生産性</span>を追求する。
+      </div>
+
+      <p class="mission-text">
+        生成 AI は、私たち一人ひとりの可能性を大きく広げる可能性を持っています。
+      </p>
+      <p class="mission-text">
+        刻々と技術が進化する超 AI 時代。<strong>AI と人間の共存</strong>は、これからの社会にとってなくてはならないものになります。
+      </p>
+      <p class="mission-text">
+        私たちは、AI の力で、眠っているすべての人の才能を解き放つ。<br>
+        場所や時間の制約を超えて、誰もが自分の可能性を最大限に発揮できる世界を創ります。
+      </p>
     </div>
-    <div class="stat-item">
-      <div class="num en">40<span class="unit">ヶ月</span></div>
-      <div class="label">連続月次黒字</div>
+  </div>
+</section>
+
+<!-- VISION (22世紀) -->
+<section class="vision" id="vision">
+  <div class="inner-narrow">
+    <div class="section-title-block">
+      <h2 class="section-title" style="color: var(--white);">Vision</h2>
+      <div class="section-subtitle">ビジョン</div>
     </div>
-    <div class="stat-item">
-      <div class="num en">33<span class="unit">%</span></div>
-      <div class="label">営業利益率</div>
+
+    <div class="vision-massive">
+      To <span class="accent">22</span>.
     </div>
+    <div class="vision-line"></div>
+    <div class="vision-headline">
+      より良い 22 世紀を、創る。
+    </div>
+
+    <p class="vision-text">
+      私たちが見据えているのは、目の前の数年ではありません。
+      <strong>「より良い 22 世紀を創る」</strong>── これが、私たちの根本的な存在意義です。
+      <br><br>
+      AI は、人類が手にする最も強力な道具の一つです。
+      この道具をどう使うかが、これから 100 年の世界を決めます。
+      <br><br>
+      私たちは、AI を <strong>「人間の可能性を解き放つもの」</strong>として使う。
+      その結果として、子どもたちが生きる 22 世紀が、今日よりも少しでも良いものになる。
+      <br><br>
+      それが、To22 という社名に込めた約束です。
+    </p>
   </div>
 </section>
 
 <!-- FOUNDER -->
-<section class="founder" id="about">
-  <div class="container">
-    <div class="founder-side">
-      <div class="founder-photo">
-        <div class="founder-photo-label">— Founder & CEO</div>
-      </div>
-      <div class="founder-info-name">野間 康平 / Kohei Noma</div>
-      <div class="founder-info-role">代表取締役 — 株式会社 To22</div>
-      <div class="founder-tags">
-        <div class="founder-tag">京都大学 工学部</div>
-        <div class="founder-tag">元 BCG</div>
-        <div class="founder-tag">2023 創業</div>
-      </div>
+<section class="founder" id="founder">
+  <div class="inner">
+    <div class="section-title-block">
+      <h2 class="section-title">Founder</h2>
+      <div class="section-subtitle">代表からのメッセージ</div>
     </div>
-    <div class="founder-body">
-      <div class="eyebrow">01 / Founder Letter</div>
-      <h2 class="section-title">なぜ、To22 を<br>作ったのか。</h2>
 
-      <p>
-        BCG で大手企業の戦略コンサルティングをしていた時、ある違和感がありました。
-        <strong>「優秀な人の時間が、本来の創造的業務以外に大量に消費されている」</strong>。
-        本当の戦力は、組織の中で眠っている。
-      </p>
-
-      <div class="pull-quote">
-        眠っている才能を、<br>AI の力で解き放ちたい。
+    <div class="founder-content">
+      <div class="founder-card">
+        <div class="founder-photo">N</div>
+        <div class="founder-name">野間 康平</div>
+        <div class="founder-name-en">Kohei Noma</div>
+        <div class="founder-divider"></div>
+        <div class="founder-role">代表取締役<br>株式会社 To22</div>
+        <div class="founder-tags">
+          <div class="founder-tag">京大 工学部</div>
+          <div class="founder-tag">元 BCG</div>
+          <div class="founder-tag">2023 創業</div>
+        </div>
       </div>
 
-      <p>
-        2022 年 11 月、ChatGPT が公開された瞬間に確信しました。
-        知的労働の構造が、根本から変わる時代の幕開けだと。
-        AI と人材の掛け合わせで、社会構造そのものを変えられる予感が、確信に変わりました。
-      </p>
+      <div class="founder-body">
+        <p>
+          BCG で大手企業の戦略コンサルティングをしていた時、ある違和感がありました。
+          <strong>「優秀な人の時間が、本来の創造的業務以外に大量に消費されている」</strong>。
+          本当の戦力は、組織の中で眠っている。そう気づいたのが、すべての始まりでした。
+        </p>
 
-      <p>
-        2023 年 1 月、To22 を創業。
-        Bootstrap（借入ゼロ・出資ゼロ）で 3.5 年、黒字を続けてきました。
-        派手な成長戦略ではなく、地道に黒字を積み重ねる経営を優先してきました。
-        いま、その土台の上に、<strong>次の挑戦</strong>に踏み出します。
-      </p>
-
-      <div class="signature">— 野間 康平</div>
-    </div>
-  </div>
-</section>
-
-<!-- VISION -->
-<section class="vision" id="vision">
-  <div class="vision-eyebrow">02 / Purpose</div>
-  <h2 class="vision-statement">Unlock your <span class="accent">potential.</span></h2>
-  <div class="vision-jp">人間の可能性を、解き放つ。</div>
-  <div class="vision-divider"></div>
-  <p class="vision-text">
-    日本には、約 1,800 万人の活かされていないポテンシャルがあります。
-    育休復帰女性、子育て中ママ、地方在住者、リスキリング層、副業希望者──
-    彼らが活躍する場が、社会に整っていない。
-    <br><br>
-    AI の力で、この眠っている才能を解き放ちたい。
-    AI 時代に、自己効力感を持って働ける人を、最大限に増やす。
-    これが、To22 の存在意義です。
-  </p>
-</section>
-
-<!-- BUSINESS / WHAT WE BUILD -->
-<section class="business">
-  <div class="container">
-    <div>
-      <div class="eyebrow">03 / What we build</div>
-      <h2 class="section-title">"AI ベイカレント"<br>という新事業。</h2>
-      <p class="section-lead">
-        部長・課長に "個人付き" で寄り添う、AI 業務改善人材。
-        コンサルでも派遣でもない、新しいカテゴリを作ります。
-      </p>
-    </div>
-    <div class="business-body">
-      <p>
-        既存事業（Insighthub）で運営してきた <strong>子育て中チーム</strong> を核に、
-        育休復帰・地方在住・リスキリング層を加え、独自認定資格（CCA）で品質保証された
-        リモート前提の AI 業務改善人材プールを構築します。
-      </p>
-      <p>
-        目指すのは、<strong>役職者の AI 化された右腕</strong>。
-        月 ¥30 万から段階的に導入できる、これまでにない価値提供モデルです。
-      </p>
-
-      <div class="business-list">
-        <div class="business-item">
-          <div class="business-item-num">01</div>
-          <div class="business-item-body">
-            <h3>人に付く</h3>
-            <p>「組織」「プロジェクト」ではなく、部長・課長「個人」に付く。業務は人に紐づくから、人にアプローチする方が本質的。</p>
-          </div>
+        <div class="founder-quote">
+          眠っている才能を、<br>AI の力で解き放ちたい。
         </div>
-        <div class="business-item">
-          <div class="business-item-num">02</div>
-          <div class="business-item-body">
-            <h3>AI で磨く</h3>
-            <p>Worker が AI と一緒に、業務フロー設計と AI 実装を行う。受託ではなく、現場と一緒に「実装」していくモデル。</p>
-          </div>
-        </div>
-        <div class="business-item">
-          <div class="business-item-num">03</div>
-          <div class="business-item-body">
-            <h3>全国分散</h3>
-            <p>子育て中チームを核に、地方・育休復帰・リスキリング層を加え、リモート前提で運営。場所を問わない人材プール。</p>
-          </div>
-        </div>
+
+        <p>
+          2022 年 11 月、ChatGPT が公開された瞬間に確信しました。
+          知的労働の構造が、根本から変わる時代の幕開けだと。
+          AI と人間の掛け合わせで、社会構造そのものを変えられる予感が、確信に変わりました。
+        </p>
+
+        <p>
+          2023 年 1 月、To22 を創業。
+          社名に込めたのは、<strong>「より良い 22 世紀を創る」</strong>という想い。
+          目の前の数年ではなく、100 年先の社会を見据えて、AI と人間の共存を追求します。
+        </p>
+
+        <p>
+          今、第二創業期に入ります。<br>
+          この大きな挑戦を、共に歩んでくれる仲間を、本気で探しています。
+        </p>
+
+        <div class="founder-signature">— 野間 康平</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CLIENTS -->
-<section class="clients">
-  <div class="container">
-    <div>
-      <div class="clients-label">04 / Trusted by</div>
-      <div class="clients-headline">
-        これまで <strong>74 社</strong> のナショナルクライアントに、
-        研究開発・新規事業・経営企画の支援をしてきました。
-      </div>
+<!-- PHILOSOPHY -->
+<section class="philosophy">
+  <div class="inner">
+    <div class="section-title-block">
+      <h2 class="section-title">Philosophy</h2>
+      <div class="section-subtitle">大切にしている思想</div>
     </div>
-    <div class="clients-grid">
-      <div>関西電力</div>
-      <div>FUJIFILM</div>
-      <div>KOBELCO</div>
-      <div>NEC</div>
-      <div>KDDI</div>
-      <div>NTT DATA</div>
-      <div>SHISEIDO</div>
-      <div>YAMAHA</div>
-      <div>CASIO</div>
-      <div>Kao</div>
-      <div>Kubota</div>
-      <div>伊藤忠</div>
-      <div>DNP</div>
-      <div>LIFULL</div>
-      <div>Timee</div>
-      <div>BIPROGY</div>
-      <div>House 食品</div>
-      <div>東急不動産</div>
-      <div>Goodpatch</div>
-      <div>三菱総研</div>
+
+    <div class="philosophy-grid">
+      <div class="philosophy-card">
+        <div class="philosophy-num">01</div>
+        <div class="philosophy-title">AI と人間の<br>共存</div>
+        <div class="philosophy-text">
+          AI は人間を置き換えるものではなく、人間の可能性を最大化する道具。
+          AI に任せられることは AI に任せ、人間にしかできない創造的業務に集中する。
+        </div>
+      </div>
+      <div class="philosophy-card">
+        <div class="philosophy-num">02</div>
+        <div class="philosophy-title">眠れる才能の<br>解放</div>
+        <div class="philosophy-text">
+          子育て中の方、地方在住の方、リスキリングを志す方──
+          活躍の場を持たない才能が日本には膨大にある。AI の力で、その才能を解き放つ。
+        </div>
+      </div>
+      <div class="philosophy-card">
+        <div class="philosophy-num">03</div>
+        <div class="philosophy-title">100 年先の<br>社会を見据える</div>
+        <div class="philosophy-text">
+          目の前の数年ではなく、100 年先の社会を視座に経営する。
+          短期的な利益ではなく、長期的な社会価値を優先する判断を続ける。
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ROLES -->
 <section class="roles" id="roles">
-  <div class="container">
-    <div>
-      <div class="eyebrow">05 / Open roles</div>
-      <h2 class="section-title">2 つの中核ポジションを<br>募集しています。</h2>
-      <p class="section-lead">
-        AI ベイカレントチームをゼロから組成する、設計者と工場長。
-        第二創業期の意思決定を、一緒に重ねていく仲間を本気で探しています。
-      </p>
+  <div class="inner">
+    <div class="section-title-block">
+      <h2 class="section-title">Open Roles</h2>
+      <div class="section-subtitle">募集ポジション</div>
     </div>
-    <div class="roles-list">
 
-      <div class="role">
+    <div class="role-list">
+      <a href="#cta" class="role">
         <div class="role-num">01</div>
-        <div>
-          <div class="role-cat">Executive</div>
-          <h3 class="role-title">CHRO / COO 候補</h3>
-          <p class="role-sub">新チームの「設計者」</p>
-
-          <div class="role-mission">
-            AI ベイカレントチームの <strong>「人・組織」全体設計図</strong> を描き、
-            ファクトリーを構築する。
-          </div>
-
-          <div class="role-section-title">Responsibilities</div>
-          <ul class="role-tasks">
-            <li>採用・育成・評価・退職の全 SOP 設計</li>
-            <li>AI + 仕組みによる人材マネジメント自動化</li>
-            <li>スケーラブルな組織図の構築</li>
-            <li>カルチャー設計（パーパス浸透）</li>
-            <li>全社オペレーション統括</li>
-          </ul>
-
-          <div class="role-comp">
-            <div>
-              <div class="role-comp-label">Base Salary</div>
-              <div class="role-comp-value">¥1,200 - ¥1,800 万</div>
-            </div>
-            <div>
-              <div class="role-comp-label">Position</div>
-              <div class="role-comp-value">執行役員候補</div>
-            </div>
-          </div>
+        <div class="role-content">
+          <h3>CHRO / COO 候補</h3>
+          <div class="role-sub">EXECUTIVE / 執行役員候補</div>
+          <p>
+            第二創業期のチーム組成と組織運営を主導する、設計者ポジション。
+            人と組織の OS を、ゼロから一緒に作り上げていただきます。
+          </p>
         </div>
-      </div>
-
-      <div class="role">
+        <div class="role-arrow">→</div>
+      </a>
+      <a href="#cta" class="role">
         <div class="role-num">02</div>
-        <div>
-          <div class="role-cat">Operations</div>
-          <h3 class="role-title">Delivery Manager</h3>
-          <p class="role-sub">デリバリーの「工場長」</p>
-
-          <div class="role-mission">
-            AI ベイカレント案件を、<strong>標準プロセス × AI 活用</strong> で
-            高品質・高回転に回す。
-          </div>
-
-          <div class="role-section-title">Responsibilities</div>
-          <ul class="role-tasks">
-            <li>案件プロジェクト管理（複数 Pod 並行）</li>
-            <li>AI 業務改善プロセスの標準化</li>
-            <li>Before / After 定量化フレーム運用</li>
-            <li>クライアント定期レポート品質管理</li>
-            <li>Worker 配置・稼働率の最適化</li>
-          </ul>
-
-          <div class="role-comp">
-            <div>
-              <div class="role-comp-label">Base Salary</div>
-              <div class="role-comp-value">¥800 - ¥1,200 万</div>
-            </div>
-            <div>
-              <div class="role-comp-label">Position</div>
-              <div class="role-comp-value">Delivery 本部長候補</div>
-            </div>
-          </div>
+        <div class="role-content">
+          <h3>Delivery Manager</h3>
+          <div class="role-sub">OPERATIONS / 本部長候補</div>
+          <p>
+            デリバリーの品質と効率を最大化する、運営の中核ポジション。
+            AI × 標準化されたプロセスで、価値を確実に届ける仕組みを作ります。
+          </p>
         </div>
-      </div>
-
+        <div class="role-arrow">→</div>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- MINDSET -->
 <section class="mindset">
-  <div class="container">
-    <div>
-      <div class="eyebrow">06 / Who we look for</div>
-      <h2 class="section-title">スキルより、<br>マインドセットを<br>見ます。</h2>
-      <p class="section-lead">
-        4 つの素質に、100% 共感できる方を、本気で探しています。
-        どれか一つでも欠けると、機能しないチームになります。
-      </p>
+  <div class="inner">
+    <div class="section-title-block">
+      <h2 class="section-title">Who We Look For</h2>
+      <div class="section-subtitle">求める人物像</div>
     </div>
-    <div class="mindset-list">
 
+    <div class="mindset-list">
       <div class="mindset-item">
         <div class="mindset-num">01</div>
         <div>
-          <h3 class="mindset-title">パーパスに共感する</h3>
+          <div class="mindset-title">ミッションへの共感</div>
           <p class="mindset-text">
-            「原石を解き放つ」という社会変革への情熱を、自分の言葉で語れる人。
+            「より良い 22 世紀を創る」「眠っている才能を解き放つ」という志に、心から共感できる方。
           </p>
         </div>
       </div>
-
       <div class="mindset-item">
         <div class="mindset-num">02</div>
         <div>
-          <h3 class="mindset-title">仕組みで解く</h3>
+          <div class="mindset-title">AI を相棒として扱える</div>
           <p class="mindset-text">
-            根性ではなく、SOP・プロンプト・システムで問題を解決できる人。
+            AI を恐れず、また過信もせず、人間の創造性を引き出す相棒として活用できる方。
           </p>
         </div>
       </div>
-
       <div class="mindset-item">
         <div class="mindset-num">03</div>
         <div>
-          <h3 class="mindset-title">数値で決める</h3>
+          <div class="mindset-title">仕組みで解く志向</div>
           <p class="mindset-text">
-            感情・印象・関係性ではなく、KPI とデータで意思決定できる人。
+            根性や属人化に頼らず、SOP・システム・仕組みで再現性ある成果を生み出せる方。
           </p>
         </div>
       </div>
-
       <div class="mindset-item">
         <div class="mindset-num">04</div>
         <div>
-          <h3 class="mindset-title">AI に任せる</h3>
+          <div class="mindset-title">長期視点で動ける</div>
           <p class="mindset-text">
-            教育・ヒアリング・管理を、AI に任せる発想ができる人。「AI にやらせるのが最速」。
+            目の前の数年ではなく、10 年・100 年先の社会を見据えて、今日の意思決定ができる方。
           </p>
         </div>
       </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process" id="process">
-  <div class="container">
-    <div>
-      <div class="eyebrow">07 / How we talk</div>
-      <h2 class="section-title">話し方は、<br>4 ステップ。</h2>
-      <p class="section-lead">
-        最短 3 週間。双方向の見極めを大切にします。
-        本気でマッチすれば、2 週間でのオファーも可能です。
-      </p>
-    </div>
-    <div>
-      <div class="process-list">
-        <div class="process-item">
-          <div class="process-num">01</div>
-          <div class="process-time">60 MIN</div>
-          <div>
-            <div class="process-title">カジュアル面談</div>
-            <div class="process-text">まず野間と話す。パーパスと価値観の相互確認。</div>
-          </div>
-        </div>
-        <div class="process-item">
-          <div class="process-num">02</div>
-          <div class="process-time">120 MIN</div>
-          <div>
-            <div class="process-title">課題ディスカッション</div>
-            <div class="process-text">「第二創業期の最初 90 日プラン」を一緒に議論。</div>
-          </div>
-        </div>
-        <div class="process-item">
-          <div class="process-num">03</div>
-          <div class="process-time">90 MIN</div>
-          <div>
-            <div class="process-title">条件すり合わせ</div>
-            <div class="process-text">報酬・入社日・権限範囲の詳細協議。</div>
-          </div>
-        </div>
-        <div class="process-item">
-          <div class="process-num">04</div>
-          <div class="process-time">— FINAL —</div>
-          <div>
-            <div class="process-title">オファー & 契約</div>
-            <div class="process-text">正式オファー、契約書締結、入社準備。</div>
-          </div>
-        </div>
-      </div>
-      <p class="process-note">
-        ▶ <strong>最短 3 週間</strong>。本気でマッチすれば、2 週間でのオファーも可能です。
-      </p>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section" id="cta">
-  <div class="cta-eyebrow">08 / Get in touch</div>
-  <h2 class="cta-headline">
-    まずは野間と、<br>
-    <span class="accent">1 時間。</span>
-  </h2>
-  <p class="cta-text">
-    「AI 時代に、自己効力感を持って働ける人を、最大限に増やす。」<br>
-    新しいチームを、ゼロから一緒に作り上げる。<br>
-    この挑戦を共にしてくれる、最初の仲間を探しています。
-  </p>
-  <a href="mailto:claude@to22inc.com?subject=To22%20第二創業期%20採用エントリー&body=To22%20野間様%0A%0Aお世話になります。%0A採用サイトを拝見し、ぜひお話を伺いたくご連絡しました。%0A%0A▼お名前：%0A▼経歴概要：%0A▼関心ポジション：（CHRO/COO 候補 ／ Delivery Manager）%0A▼ご都合のよい日程（複数候補）：%0A%0Aどうぞよろしくお願いいたします。" class="cta-button">
-    話を聞く
-    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-  </a>
-  <div class="cta-meta">
-    <a href="mailto:claude@to22inc.com">claude@to22inc.com</a> / 野間 康平
+  <div class="cta-inner">
+    <div class="cta-eyebrow">CONTACT US</div>
+    <h2 class="cta-headline">
+      まずは、<br>
+      <span class="accent">1 時間。</span>
+    </h2>
+    <p class="cta-text">
+      経歴書も志望動機も、まだ要りません。<br>
+      まずは野間と、お互いに腹を割って話す時間を取りませんか。<br>
+      <br>
+      「より良い 22 世紀を創る」── この挑戦を、共にしてくれる仲間を本気で探しています。
+    </p>
+    <a href="mailto:claude@to22inc.com?subject=To22%20第二創業期%20採用エントリー&body=To22%20野間様%0A%0Aお世話になります。%0A採用サイトを拝見し、ぜひお話を伺いたくご連絡しました。%0A%0A▼お名前：%0A▼経歴概要：%0A▼関心ポジション：（CHRO/COO 候補 ／ Delivery Manager）%0A▼ご都合のよい日程（複数候補）：%0A%0Aどうぞよろしくお願いいたします。" class="cta-button">
+      話を聞く
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <div class="cta-contact">
+      <a href="mailto:claude@to22inc.com">claude@to22inc.com</a> ／ 株式会社 To22 代表取締役 野間 康平
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="container">
-    <div class="brand">To22</div>
-    <div class="meta">© 2026 株式会社 To22 / All rights reserved</div>
-  </div>
+  <div class="brand">To<span style="color: var(--red);">♡</span></div>
+  <p>株式会社 To22 — より良い 22 世紀を創る</p>
+  <p>〒103-0024 東京都中央区日本橋小舟町 8-13</p>
+  <p style="margin-top: 16px;">© 2026 To22 Inc. All rights reserved.</p>
 </footer>
 
 <script>

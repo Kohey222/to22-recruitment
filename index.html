@@ -5,977 +5,697 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
-<title>To22 — Unlock Your Potential.</title>
-<meta name="description" content="株式会社To22 第二創業期 採用サイト。CHRO/COO候補・Delivery Manager候補を募集しています。">
+<title>To22 — Careers</title>
+<meta name="description" content="株式会社To22 採用情報。CHRO/COO候補・Delivery Manager候補を募集しています。">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
   :root {
-    --bg: #0A1628;
-    --bg-deep: #050D1A;
-    --bg-alt: #0F1E33;
-    --cream: #FAF6EE;
-    --cream-alt: #F4ECD8;
-    --gold: #D4A256;
-    --gold-bright: #E8B968;
-    --gold-soft: #C99655;
-    --gold-dark: #8B6428;
+    --bg: #F5F2EC;
+    --bg-deep: #0E0E0E;
+    --bg-card: #FFFFFF;
+    --ink: #131313;
+    --ink-2: #3D3D3D;
+    --ink-3: #6E6E6E;
+    --ink-4: #9C9C9C;
+    --line: rgba(19, 19, 19, 0.1);
+    --line-2: rgba(19, 19, 19, 0.06);
+    --line-dark: rgba(255, 255, 255, 0.12);
+    --accent: #B8843E;
+    --accent-soft: rgba(184, 132, 62, 0.1);
+    --cream-on-dark: #E8E2D4;
     --white: #FFFFFF;
-    --ink: #0F1419;
-    --muted: rgba(255, 255, 255, 0.55);
-    --muted-dark: rgba(15, 20, 25, 0.6);
-    --accent: #E8B968;
-    --border-light: rgba(255, 255, 255, 0.1);
-    --border-dark: rgba(15, 20, 25, 0.08);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
   body {
-    font-family: 'Noto Sans JP', 'Inter', -apple-system, sans-serif;
-    color: var(--white);
+    font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
-    line-height: 1.7;
-    overflow-x: hidden;
+    color: var(--ink);
+    line-height: 1.75;
     font-weight: 400;
+    font-feature-settings: "palt";
+    overflow-x: hidden;
   }
-  .en { font-family: 'Inter', sans-serif; letter-spacing: -0.02em; }
-  .display { font-family: 'Playfair Display', serif; font-style: italic; letter-spacing: -0.02em; }
+  ::selection { background: var(--ink); color: var(--bg); }
 
-  /* ===== NAV ===== */
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+  .en { font-family: 'Inter', sans-serif; letter-spacing: -0.01em; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ============ NAV ============ */
   nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    z-index: 100; padding: 24px 48px;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 24px 40px;
     display: flex; justify-content: space-between; align-items: center;
-    transition: all 0.4s;
-    mix-blend-mode: difference;
+    transition: background 0.3s, border 0.3s, padding 0.3s;
+    border-bottom: 1px solid transparent;
   }
   nav.scrolled {
-    padding: 16px 48px;
-    background: rgba(10, 22, 40, 0.85);
+    background: rgba(245, 242, 236, 0.85);
     backdrop-filter: blur(20px);
-    mix-blend-mode: normal;
-    border-bottom: 1px solid var(--border-light);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 40px;
   }
   nav .brand {
     font-family: 'Inter', sans-serif;
-    font-weight: 900; font-size: 22px;
-    letter-spacing: 0.05em; color: var(--white);
+    font-weight: 700; font-size: 18px;
+    letter-spacing: -0.02em; color: var(--ink);
   }
-  nav .brand span { color: var(--gold); }
-  nav .menu { display: flex; gap: 40px; align-items: center; }
+  nav .menu { display: flex; gap: 32px; align-items: center; }
   nav .menu a {
-    color: var(--white); text-decoration: none;
-    font-size: 13px; font-weight: 500;
-    letter-spacing: 0.05em; transition: opacity 0.2s;
-    opacity: 0.7;
+    font-size: 13px; font-weight: 500; color: var(--ink-2);
+    transition: color 0.2s;
   }
-  nav .menu a:hover { opacity: 1; }
-  nav .menu a.cta {
-    background: var(--gold); color: var(--bg-deep);
-    padding: 10px 24px; border-radius: 100px;
-    font-weight: 700; opacity: 1; letter-spacing: 0.02em;
-    transition: background 0.2s, transform 0.2s;
+  nav .menu a:hover { color: var(--ink); }
+  nav .menu a.contact {
+    background: var(--ink); color: var(--bg);
+    padding: 8px 18px; border-radius: 6px;
+    transition: opacity 0.2s;
   }
-  nav .menu a.cta:hover { background: var(--gold-bright); transform: translateY(-1px); }
-  @media (max-width: 768px) {
-    nav { padding: 20px 24px; }
+  nav .menu a.contact:hover { opacity: 0.85; color: var(--bg); }
+  @media (max-width: 720px) {
+    nav { padding: 18px 24px; }
     nav.scrolled { padding: 14px 24px; }
-    nav .menu a:not(.cta) { display: none; }
-    nav .menu a.cta { padding: 10px 18px; font-size: 12px; }
+    nav .menu a:not(.contact) { display: none; }
   }
 
-  /* ===== HERO ===== */
+  /* ============ LAYOUT PRIMITIVES ============ */
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 40px; }
+  .container-narrow { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 720px) {
+    .container, .container-narrow { padding: 0 24px; }
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-3); margin-bottom: 32px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .eyebrow::before {
+    content: ''; width: 24px; height: 1px; background: var(--ink-4);
+  }
+  .dark .eyebrow { color: var(--ink-4); }
+  .dark .eyebrow::before { background: var(--ink-4); }
+
+  /* ============ HERO ============ */
   .hero {
-    min-height: 100vh;
-    position: relative; overflow: hidden;
-    background: var(--bg-deep);
-    display: flex; flex-direction: column;
+    min-height: 100vh; display: flex; flex-direction: column;
     justify-content: center;
-    padding: 120px 48px 80px;
+    padding: 160px 40px 80px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
   }
-  .hero::before {
-    content: ''; position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse at top right, rgba(212, 162, 86, 0.18) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom left, rgba(46, 117, 182, 0.12) 0%, transparent 50%);
-    pointer-events: none;
+  @media (max-width: 720px) {
+    .hero { padding: 140px 24px 60px; }
   }
-  .hero::after {
-    content: ''; position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-    background-size: 80px 80px;
-    pointer-events: none;
-    mask-image: radial-gradient(ellipse at center, black 0%, transparent 80%);
-  }
-  .hero-inner {
-    max-width: 1280px; margin: 0 auto; width: 100%;
-    position: relative; z-index: 2;
-  }
-  .hero-label {
-    display: inline-flex; align-items: center; gap: 12px;
-    color: var(--gold); font-size: 12px; font-weight: 600;
-    letter-spacing: 0.3em; margin-bottom: 48px;
-    font-family: 'Inter', sans-serif;
-  }
-  .hero-label::before {
-    content: ''; width: 32px; height: 1px;
-    background: var(--gold);
-  }
+  .hero-inner { max-width: 1240px; width: 100%; margin: 0 auto; }
   .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-style: italic; font-weight: 800;
-    font-size: clamp(56px, 11vw, 160px);
-    line-height: 0.95;
-    color: var(--white);
-    margin-bottom: 32px;
-    background: linear-gradient(135deg, var(--white) 0%, var(--cream) 40%, var(--gold) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: clamp(48px, 9vw, 132px);
+    font-weight: 500;
+    line-height: 1.0; letter-spacing: -0.045em;
+    color: var(--ink); margin-bottom: 56px;
+    max-width: 12ch;
   }
-  .hero-sub {
-    font-size: clamp(20px, 3vw, 36px); font-weight: 300;
-    color: var(--cream); margin-bottom: 64px;
-    max-width: 800px; line-height: 1.4;
-  }
-  .hero-sub strong { color: var(--gold); font-weight: 600; }
+  .hero h1 .accent { color: var(--accent); }
 
   .hero-meta {
-    display: grid; grid-template-columns: 1fr auto;
-    gap: 48px; align-items: end;
-    padding-top: 48px;
-    border-top: 1px solid var(--border-light);
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: end;
+    padding-top: 64px; border-top: 1px solid var(--line);
   }
-  @media (max-width: 768px) {
-    .hero-meta { grid-template-columns: 1fr; gap: 32px; }
+  @media (max-width: 880px) {
+    .hero-meta { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .hero-meta-block { max-width: 480px; }
+  .hero-meta-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-3); margin-bottom: 16px;
   }
   .hero-meta-text {
-    color: var(--muted); font-size: 14px;
-    line-height: 1.8; max-width: 480px;
+    font-size: 16px; line-height: 1.7;
+    color: var(--ink-2);
   }
-  .hero-meta-text strong { color: var(--white); font-weight: 600; }
   .hero-cta {
-    display: inline-flex; align-items: center; gap: 12px;
-    background: var(--gold); color: var(--bg-deep);
-    padding: 22px 48px; border-radius: 100px;
-    text-decoration: none; font-weight: 700;
-    font-size: 16px; letter-spacing: 0.02em;
-    transition: all 0.3s;
-    box-shadow: 0 20px 60px -10px rgba(212, 162, 86, 0.5);
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--ink); color: var(--bg);
+    padding: 18px 32px; border-radius: 8px;
+    font-size: 15px; font-weight: 600;
+    transition: opacity 0.2s, transform 0.2s;
   }
-  .hero-cta:hover {
-    background: var(--gold-bright); transform: translateY(-2px);
-    box-shadow: 0 25px 70px -10px rgba(212, 162, 86, 0.6);
+  .hero-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+  .hero-cta svg {
+    width: 16px; height: 16px; transition: transform 0.2s;
   }
-  .hero-cta svg { width: 18px; height: 18px; transition: transform 0.3s; }
-  .hero-cta:hover svg { transform: translateX(4px); }
+  .hero-cta:hover svg { transform: translateX(3px); }
 
-  .hero-scroll {
-    position: absolute; bottom: 32px; left: 50%;
-    transform: translateX(-50%);
-    color: var(--muted); font-size: 11px;
-    letter-spacing: 0.3em; text-align: center;
-    font-family: 'Inter', sans-serif;
-    animation: bounce 2s infinite;
-  }
-  .hero-scroll::after {
-    content: ''; display: block; width: 1px; height: 32px;
-    background: var(--muted); margin: 12px auto 0;
-  }
-  @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
-    50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
-  }
-
-  /* ===== SECTION COMMONS ===== */
-  section {
-    padding: 160px 48px;
-    position: relative;
-  }
-  section .inner {
-    max-width: 1280px; margin: 0 auto;
-  }
-  @media (max-width: 768px) {
-    section { padding: 100px 24px; }
-  }
-
-  .section-tag {
-    display: inline-flex; align-items: center; gap: 12px;
-    font-family: 'Inter', sans-serif;
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 0.3em; color: var(--gold);
-    margin-bottom: 32px;
-  }
-  .section-tag::before {
-    content: ''; width: 32px; height: 1px;
-    background: var(--gold);
-  }
-  .section-headline {
-    font-size: clamp(36px, 6vw, 80px);
-    line-height: 1.1; font-weight: 700;
-    margin-bottom: 48px; letter-spacing: -0.02em;
-  }
-  .section-lead {
-    font-size: clamp(17px, 2vw, 22px);
-    line-height: 1.8; color: var(--muted);
-    max-width: 720px; font-weight: 300;
-  }
-  .light .section-headline { color: var(--ink); }
-  .light .section-lead { color: var(--muted-dark); }
-
-  /* ===== SECTION: WHY NOW ===== */
-  .why-now { background: var(--bg-deep); }
-  .stat-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 0; margin-top: 80px;
-    border-top: 1px solid var(--border-light);
-    border-left: 1px solid var(--border-light);
-  }
-  @media (max-width: 1024px) {
-    .stat-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  .stat {
-    padding: 48px 32px; position: relative;
-    border-right: 1px solid var(--border-light);
-    border-bottom: 1px solid var(--border-light);
-    transition: background 0.4s;
-  }
-  .stat:hover { background: rgba(212, 162, 86, 0.05); }
-  .stat-num {
-    font-family: 'Inter', sans-serif;
-    font-weight: 800; font-size: clamp(48px, 7vw, 96px);
-    line-height: 1; color: var(--gold);
-    margin-bottom: 16px; letter-spacing: -0.04em;
-  }
-  .stat-num small {
-    font-size: 0.4em; color: var(--white);
-    font-weight: 600; letter-spacing: 0;
-  }
-  .stat-label {
-    font-size: 14px; font-weight: 500;
-    color: var(--white); margin-bottom: 8px;
-  }
-  .stat-desc {
-    font-size: 12px; color: var(--muted);
-    line-height: 1.6;
-  }
-
-  .why-now-quote {
-    margin-top: 96px; text-align: center;
-    max-width: 900px; margin-left: auto; margin-right: auto;
-  }
-  .why-now-quote p {
-    font-family: 'Playfair Display', serif;
-    font-style: italic; font-weight: 600;
-    font-size: clamp(24px, 4vw, 42px);
-    line-height: 1.4; color: var(--cream);
-    background: linear-gradient(135deg, var(--cream) 30%, var(--gold) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* ===== SECTION: FOUNDER ===== */
-  .founder {
-    background: var(--cream);
+  /* ============ SECTION COMMON ============ */
+  section { padding: 140px 0; border-bottom: 1px solid var(--line); }
+  @media (max-width: 720px) { section { padding: 100px 0; } }
+  .dark { background: var(--bg-deep); color: var(--cream-on-dark); border-bottom: 1px solid var(--line-dark); }
+  .dark h2, .dark h3 { color: var(--white); }
+  .section-title {
+    font-size: clamp(34px, 5vw, 60px);
+    font-weight: 500; line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px; max-width: 18ch;
     color: var(--ink);
   }
-  .founder .inner {
-    display: grid; grid-template-columns: 1fr 1.4fr;
-    gap: 96px; align-items: start;
+  .dark .section-title { color: var(--white); }
+  .section-lead {
+    font-size: clamp(17px, 1.6vw, 20px);
+    line-height: 1.7; color: var(--ink-2);
+    max-width: 640px;
   }
-  @media (max-width: 1024px) {
-    .founder .inner { grid-template-columns: 1fr; gap: 56px; }
+  .dark .section-lead { color: var(--cream-on-dark); opacity: 0.85; }
+
+  /* ============ STATS ============ */
+  .stats { padding: 100px 0; background: var(--bg-deep); color: var(--white); border-bottom: 1px solid var(--line-dark); }
+  .stats .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px; }
+  @media (max-width: 880px) { .stats .container { grid-template-columns: repeat(2, 1fr); gap: 48px 40px; } }
+  .stat-item .num {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 400; letter-spacing: -0.04em;
+    line-height: 1; color: var(--white);
+    margin-bottom: 16px;
   }
-  .founder-portrait {
-    position: sticky; top: 120px;
-    background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
-    border-radius: 8px; padding: 64px 48px;
-    color: var(--white); text-align: center;
-    box-shadow: 0 40px 80px -20px rgba(15, 30, 51, 0.3);
+  .stat-item .num .unit {
+    font-size: 0.45em; color: var(--ink-4); font-weight: 400;
+    margin-left: 4px;
   }
-  @media (max-width: 1024px) {
-    .founder-portrait { position: static; }
-  }
-  .founder-avatar {
-    width: 180px; height: 180px; margin: 0 auto 32px;
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 80px; color: var(--bg-deep);
-    box-shadow: 0 20px 40px -10px rgba(212, 162, 86, 0.4);
-  }
-  .founder-name {
-    font-size: 28px; font-weight: 700;
-    margin-bottom: 4px;
-  }
-  .founder-name-en {
-    font-family: 'Inter', sans-serif; font-style: italic;
-    color: var(--gold); font-weight: 500; font-size: 14px;
-    letter-spacing: 0.05em; margin-bottom: 32px;
-  }
-  .founder-divider {
-    width: 48px; height: 2px; background: var(--gold);
-    margin: 0 auto 32px;
-  }
-  .founder-role { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
-  .founder-tags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-  .founder-tag {
-    background: rgba(212, 162, 86, 0.15);
-    border: 1px solid var(--gold-soft);
-    color: var(--gold); font-size: 11px;
-    padding: 6px 14px; border-radius: 100px;
-    font-weight: 600;
+  .stat-item .label {
+    font-size: 14px; color: var(--ink-4);
+    line-height: 1.5;
   }
 
-  .founder-content {
-    padding-top: 16px;
+  /* ============ FOUNDER ============ */
+  .founder .container { display: grid; grid-template-columns: 380px 1fr; gap: 100px; }
+  @media (max-width: 880px) { .founder .container { grid-template-columns: 1fr; gap: 56px; } }
+  .founder-side {
+    position: sticky; top: 120px; align-self: start;
   }
-  .founder-content .section-tag { color: var(--gold-dark); }
-  .founder-content .section-tag::before { background: var(--gold-dark); }
-  .founder-content h2 {
-    font-size: clamp(32px, 5vw, 56px); font-weight: 700;
-    line-height: 1.2; color: var(--ink);
-    margin-bottom: 48px; letter-spacing: -0.02em;
-  }
-  .founder-quote {
-    font-family: 'Playfair Display', serif;
-    font-style: italic; font-size: clamp(22px, 3vw, 32px);
-    line-height: 1.5; color: var(--ink);
-    margin: 48px 0;
-    padding: 32px 0 32px 32px;
-    border-left: 4px solid var(--gold);
-  }
-  .founder-content p {
-    font-size: 17px; color: var(--ink);
-    line-height: 1.9; margin-bottom: 24px;
-  }
-  .founder-content .signature {
-    margin-top: 48px; font-style: italic;
-    color: var(--muted-dark); font-size: 14px;
-  }
-
-  /* ===== SECTION: WHAT WE BUILD ===== */
-  .what-we-build {
-    background: var(--bg);
+  @media (max-width: 880px) { .founder-side { position: static; } }
+  .founder-photo {
+    aspect-ratio: 3/4;
+    background:
+      radial-gradient(ellipse at 30% 30%, #1a1a1a 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 70%, var(--accent) 0%, transparent 60%),
+      #0A0A0A;
+    border-radius: 4px;
+    display: flex; align-items: flex-end;
+    padding: 32px;
+    margin-bottom: 24px;
     position: relative; overflow: hidden;
   }
-  .what-we-build::before {
-    content: ''; position: absolute; top: 0; right: 0;
-    width: 60%; height: 100%;
-    background:
-      radial-gradient(ellipse at center, rgba(212, 162, 86, 0.08) 0%, transparent 60%);
-    pointer-events: none;
-  }
-  .build-grid {
-    display: grid; grid-template-columns: 1fr 1.2fr;
-    gap: 96px; align-items: center; margin-top: 80px;
-    position: relative;
-  }
-  @media (max-width: 1024px) {
-    .build-grid { grid-template-columns: 1fr; gap: 56px; }
-  }
-  .build-headline {
-    font-size: clamp(28px, 4vw, 48px);
-    font-weight: 700; line-height: 1.3;
-    margin-bottom: 32px; letter-spacing: -0.02em;
-  }
-  .build-headline strong {
-    color: var(--gold);
-    font-weight: 700;
-  }
-  .build-text {
-    color: var(--muted); font-size: 17px;
-    line-height: 1.9; margin-bottom: 24px;
-  }
-  .build-text strong { color: var(--white); font-weight: 600; }
-
-  .build-visual {
-    position: relative; aspect-ratio: 1;
-    max-width: 500px; margin: 0 auto;
-  }
-  .build-orbit {
-    position: absolute; inset: 0;
-    border: 1px dashed rgba(212, 162, 86, 0.3);
-    border-radius: 50%;
-    animation: rotate 60s linear infinite;
-  }
-  .build-orbit-2 {
-    position: absolute; inset: 20%;
-    border: 1px dashed rgba(212, 162, 86, 0.4);
-    border-radius: 50%;
-    animation: rotate 40s linear infinite reverse;
-  }
-  @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  .build-core {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%; aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--bg-deep); font-weight: 800;
-    font-size: clamp(20px, 3vw, 32px);
-    text-align: center; padding: 16px;
-    line-height: 1.2;
-    box-shadow: 0 0 80px rgba(212, 162, 86, 0.4);
-  }
-  .build-node {
-    position: absolute; width: 80px; height: 80px;
-    background: var(--bg-alt);
-    border: 1px solid var(--border-light);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 12px; font-weight: 600; color: var(--white);
-    text-align: center; padding: 8px;
-    line-height: 1.2;
-    backdrop-filter: blur(10px);
-  }
-  .build-node-1 { top: 0; left: 50%; transform: translateX(-50%); }
-  .build-node-2 { top: 50%; right: 0; transform: translateY(-50%); }
-  .build-node-3 { bottom: 0; left: 50%; transform: translateX(-50%); }
-  .build-node-4 { top: 50%; left: 0; transform: translateY(-50%); }
-
-  .build-principles {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 24px; margin-top: 120px;
-  }
-  @media (max-width: 768px) {
-    .build-principles { grid-template-columns: 1fr; }
-  }
-  .principle {
-    padding: 40px 32px;
-    background: var(--bg-alt);
-    border: 1px solid var(--border-light);
-    border-radius: 8px;
-    transition: all 0.3s;
-  }
-  .principle:hover {
-    border-color: var(--gold);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px -10px rgba(212, 162, 86, 0.2);
-  }
-  .principle-num {
+  .founder-photo::after {
+    content: 'N';
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
     font-family: 'Inter', sans-serif;
-    font-weight: 800; font-size: 14px;
-    color: var(--gold); letter-spacing: 0.1em;
-    margin-bottom: 24px;
+    font-size: 200px; font-weight: 200;
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
   }
-  .principle-title {
-    font-size: 22px; font-weight: 700;
-    margin-bottom: 16px; line-height: 1.3;
+  .founder-photo-label {
+    position: relative; z-index: 1;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.1em;
   }
-  .principle-text {
-    color: var(--muted); font-size: 14px;
-    line-height: 1.8;
+  .founder-info-name {
+    font-size: 18px; font-weight: 600;
+    color: var(--ink); margin-bottom: 4px;
+  }
+  .founder-info-role {
+    font-size: 13px; color: var(--ink-3);
+    margin-bottom: 16px;
+  }
+  .founder-tags {
+    display: flex; gap: 6px; flex-wrap: wrap;
+  }
+  .founder-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ink-2);
+    padding: 4px 10px; border: 1px solid var(--line);
+    border-radius: 100px;
   }
 
-  /* ===== SECTION: VISION ===== */
+  .founder-body { padding-top: 16px; }
+  .founder-body p {
+    font-size: 18px; line-height: 1.85; color: var(--ink-2);
+    margin-bottom: 28px; max-width: 660px;
+  }
+  .founder-body p strong { color: var(--ink); font-weight: 600; }
+  .pull-quote {
+    margin: 56px 0;
+    padding-left: 24px;
+    border-left: 2px solid var(--accent);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 500; line-height: 1.5;
+    color: var(--ink); max-width: 660px;
+  }
+  .signature {
+    margin-top: 56px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: var(--ink-3);
+  }
+
+  /* ============ VISION ============ */
   .vision {
-    background: var(--cream);
-    color: var(--ink);
-    text-align: center;
-    padding: 200px 48px;
+    padding: 200px 40px;
+    text-align: center; background: var(--bg-deep);
+    color: var(--white); border-bottom: 1px solid var(--line-dark);
   }
-  .vision-label {
-    color: var(--gold-dark); font-size: 12px;
-    font-weight: 700; letter-spacing: 0.4em;
-    font-family: 'Inter', sans-serif;
+  .vision-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink-4);
     margin-bottom: 48px;
   }
-  .vision-main {
-    font-family: 'Playfair Display', serif;
-    font-style: italic; font-weight: 800;
-    font-size: clamp(56px, 12vw, 160px);
-    line-height: 1; letter-spacing: -0.03em;
-    background: linear-gradient(135deg, var(--ink) 0%, var(--gold-dark) 50%, var(--gold) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .vision-statement {
+    font-size: clamp(48px, 9vw, 132px);
+    font-weight: 400; line-height: 0.95;
+    letter-spacing: -0.04em; color: var(--white);
     margin-bottom: 32px;
   }
+  .vision-statement .accent { color: var(--accent); }
   .vision-jp {
-    font-size: clamp(24px, 4vw, 40px);
-    font-weight: 600; color: var(--ink);
-    margin-bottom: 64px; letter-spacing: -0.01em;
+    font-size: clamp(18px, 2vw, 24px);
+    color: var(--cream-on-dark); opacity: 0.7;
+    font-weight: 400; margin-bottom: 64px;
   }
   .vision-divider {
-    width: 48px; height: 2px; background: var(--gold);
+    width: 32px; height: 1px;
+    background: var(--ink-4);
     margin: 0 auto 64px;
   }
   .vision-text {
-    max-width: 720px; margin: 0 auto;
-    font-size: clamp(16px, 2vw, 19px);
-    line-height: 2.2; color: var(--muted-dark);
-  }
-  .vision-text strong {
-    color: var(--gold-dark); font-weight: 700;
-    font-size: 1.1em;
+    max-width: 620px; margin: 0 auto;
+    font-size: 17px; line-height: 1.95;
+    color: var(--cream-on-dark); opacity: 0.85;
+    text-align: left;
   }
 
-  /* ===== SECTION: TRUSTED BY ===== */
-  .trusted {
-    background: var(--bg);
-    padding: 120px 48px;
-    overflow: hidden;
+  /* ============ BUSINESS ============ */
+  .business .container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 100px; align-items: start;
   }
-  .trusted .inner { text-align: center; }
-  .trusted .section-tag { color: var(--gold); margin-bottom: 24px; }
-  .trusted h3 {
-    font-size: clamp(20px, 2.5vw, 28px);
-    font-weight: 500; color: var(--muted);
-    margin-bottom: 64px; line-height: 1.6;
+  @media (max-width: 880px) {
+    .business .container { grid-template-columns: 1fr; gap: 48px; }
   }
-  .trusted h3 strong { color: var(--white); font-weight: 700; }
-  .logo-marquee {
-    position: relative; overflow: hidden;
-    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  .business-body p {
+    font-size: 18px; line-height: 1.85;
+    color: var(--ink-2); margin-bottom: 24px;
   }
-  .logo-track {
-    display: flex; gap: 24px;
-    animation: scroll 50s linear infinite;
-    width: fit-content;
+  .business-body p strong { color: var(--ink); font-weight: 600; }
+  .business-list {
+    margin-top: 56px;
+    border-top: 1px solid var(--line);
   }
-  @keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+  .business-item {
+    display: grid; grid-template-columns: 60px 1fr;
+    gap: 32px; padding: 32px 0;
+    border-bottom: 1px solid var(--line);
   }
-  .logo-item {
-    flex-shrink: 0; padding: 20px 36px;
-    background: var(--bg-alt);
-    border: 1px solid var(--border-light);
-    border-radius: 100px;
-    color: var(--cream); font-size: 14px;
-    font-weight: 500; white-space: nowrap;
+  @media (max-width: 720px) {
+    .business-item { grid-template-columns: 1fr; gap: 8px; }
+  }
+  .business-item-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--ink-3);
+    padding-top: 4px;
+  }
+  .business-item-body h3 {
+    font-size: 22px; font-weight: 600;
+    color: var(--ink); margin-bottom: 8px;
+  }
+  .business-item-body p {
+    font-size: 15px; color: var(--ink-3);
+    line-height: 1.7; max-width: 540px;
   }
 
-  /* ===== SECTION: ROLES ===== */
-  .roles { background: var(--bg-deep); }
-  .role-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 32px; margin-top: 80px;
+  /* ============ CLIENT LIST ============ */
+  .clients { padding: 100px 0; border-bottom: 1px solid var(--line); }
+  .clients .container { display: grid; grid-template-columns: 320px 1fr; gap: 80px; align-items: start; }
+  @media (max-width: 880px) {
+    .clients .container { grid-template-columns: 1fr; gap: 32px; }
   }
-  @media (max-width: 1024px) {
-    .role-grid { grid-template-columns: 1fr; }
+  .clients-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-3);
+    margin-bottom: 16px;
   }
+  .clients-headline {
+    font-size: 20px; font-weight: 500;
+    color: var(--ink); line-height: 1.5;
+  }
+  .clients-headline strong { color: var(--accent); font-weight: 600; }
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+  }
+  .clients-grid div {
+    padding: 24px 16px; text-align: center;
+    color: var(--ink-2); font-size: 13px;
+    font-weight: 500;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ============ ROLES ============ */
+  .roles .container {
+    display: grid; grid-template-columns: 380px 1fr;
+    gap: 100px; align-items: start;
+  }
+  @media (max-width: 880px) {
+    .roles .container { grid-template-columns: 1fr; gap: 48px; }
+  }
+  .roles-list { display: flex; flex-direction: column; gap: 0; }
   .role {
-    background: var(--bg-alt);
-    border: 1px solid var(--border-light);
-    border-radius: 12px; padding: 56px 48px;
-    position: relative; overflow: hidden;
-    transition: all 0.4s;
+    padding: 56px 0;
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 60px 1fr;
+    gap: 32px;
   }
-  .role::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0;
-    height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-bright));
-  }
-  .role:hover {
-    transform: translateY(-4px);
-    border-color: var(--gold-soft);
-    box-shadow: 0 30px 60px -20px rgba(212, 162, 86, 0.3);
-  }
-  .role-meta {
-    display: flex; align-items: center; gap: 16px;
-    margin-bottom: 32px;
+  .role:last-child { border-bottom: 1px solid var(--line); }
+  @media (max-width: 720px) {
+    .role { grid-template-columns: 1fr; gap: 16px; }
   }
   .role-num {
-    font-family: 'Inter', sans-serif;
-    font-weight: 800; font-size: 56px;
-    color: var(--gold); line-height: 1;
-    letter-spacing: -0.04em;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: var(--ink-3);
   }
   .role-cat {
-    font-family: 'Inter', sans-serif;
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 0.3em; color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 12px;
   }
   .role-title {
-    font-size: clamp(28px, 3vw, 36px);
-    font-weight: 700; line-height: 1.2;
-    margin-bottom: 8px; letter-spacing: -0.01em;
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 500; letter-spacing: -0.02em;
+    line-height: 1.2; color: var(--ink);
+    margin-bottom: 16px;
   }
   .role-sub {
-    color: var(--muted); font-size: 14px;
-    font-style: italic; margin-bottom: 40px;
+    font-size: 15px; color: var(--ink-3);
+    margin-bottom: 32px;
   }
   .role-mission {
-    background: rgba(212, 162, 86, 0.08);
-    border-left: 3px solid var(--gold);
-    padding: 24px 28px; border-radius: 0 8px 8px 0;
-    margin-bottom: 40px;
+    font-size: 17px; line-height: 1.7;
+    color: var(--ink-2); padding: 24px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 32px;
   }
-  .role-mission-label {
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 0.2em; color: var(--gold);
-    margin-bottom: 12px;
+  .role-mission strong { color: var(--ink); font-weight: 600; }
+  .role-section-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-3);
+    margin-bottom: 16px;
   }
-  .role-mission-text {
-    font-size: 18px; font-weight: 600;
-    line-height: 1.6; color: var(--white);
-  }
-  .role-tasks-title {
-    font-size: 12px; font-weight: 700;
-    letter-spacing: 0.2em; color: var(--muted);
-    margin-bottom: 20px;
-  }
-  .role-tasks { list-style: none; }
+  .role-tasks { list-style: none; margin-bottom: 32px; }
   .role-tasks li {
-    display: flex; gap: 16px; padding: 12px 0;
-    border-bottom: 1px solid var(--border-light);
-    font-size: 14px; color: var(--cream);
+    padding: 10px 0; font-size: 15px;
+    color: var(--ink-2); line-height: 1.6;
+    display: flex; gap: 16px;
   }
-  .role-tasks li:last-child { border-bottom: none; }
   .role-tasks li::before {
-    content: ''; width: 6px; height: 6px;
-    border-radius: 50%; background: var(--gold);
-    flex-shrink: 0; margin-top: 9px;
+    content: '—'; color: var(--ink-4);
+    flex-shrink: 0;
   }
   .role-comp {
-    margin-top: 40px; padding-top: 32px;
-    border-top: 1px solid var(--border-light);
     display: grid; grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 32px; padding-top: 24px;
+    border-top: 1px solid var(--line);
   }
-  .role-comp-item-label {
-    font-size: 11px; font-weight: 600;
-    letter-spacing: 0.15em; color: var(--muted);
+  .role-comp-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-3);
     margin-bottom: 8px;
   }
-  .role-comp-item-value {
-    font-size: 16px; font-weight: 700;
-    color: var(--gold);
-  }
-
-  /* ===== SECTION: MINDSET ===== */
-  .mindset { background: var(--cream); color: var(--ink); }
-  .mindset-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 24px; margin-top: 80px;
-  }
-  @media (max-width: 1024px) {
-    .mindset-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 600px) {
-    .mindset-grid { grid-template-columns: 1fr; }
-  }
-  .mindset-card {
-    padding: 40px 32px;
-    background: var(--white);
-    border-radius: 8px;
-    transition: all 0.4s;
-    border: 1px solid var(--border-dark);
-  }
-  .mindset-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 30px 60px -20px rgba(15, 20, 25, 0.15);
-  }
-  .mindset-num {
-    font-family: 'Inter', sans-serif;
-    font-weight: 800; font-size: 14px;
-    color: var(--gold-dark); letter-spacing: 0.1em;
-    margin-bottom: 24px;
-  }
-  .mindset-title {
-    font-size: 22px; font-weight: 700;
-    line-height: 1.3; margin-bottom: 16px;
+  .role-comp-value {
+    font-size: 16px; font-weight: 600;
     color: var(--ink);
   }
+
+  /* ============ MINDSET ============ */
+  .mindset .container { display: grid; grid-template-columns: 380px 1fr; gap: 100px; align-items: start; }
+  @media (max-width: 880px) {
+    .mindset .container { grid-template-columns: 1fr; gap: 48px; }
+  }
+  .mindset-list {
+    border-top: 1px solid var(--line);
+  }
+  .mindset-item {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 60px 1fr;
+    gap: 32px; align-items: baseline;
+  }
+  @media (max-width: 720px) {
+    .mindset-item { grid-template-columns: 1fr; gap: 8px; }
+  }
+  .mindset-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: var(--ink-3);
+  }
+  .mindset-title {
+    font-size: clamp(20px, 2.2vw, 26px);
+    font-weight: 500; color: var(--ink);
+    margin-bottom: 12px; letter-spacing: -0.01em;
+  }
   .mindset-text {
-    color: var(--muted-dark); font-size: 14px;
-    line-height: 1.8;
+    font-size: 15px; line-height: 1.7;
+    color: var(--ink-3); max-width: 580px;
   }
 
-  .mindset-note {
-    margin-top: 64px; text-align: center;
-    font-style: italic; color: var(--muted-dark);
-    font-size: 15px;
+  /* ============ PROCESS ============ */
+  .process .container { display: grid; grid-template-columns: 380px 1fr; gap: 100px; align-items: start; }
+  @media (max-width: 880px) {
+    .process .container { grid-template-columns: 1fr; gap: 48px; }
   }
-  .mindset-note strong { color: var(--gold-dark); font-weight: 700; }
-
-  /* ===== SECTION: PROCESS ===== */
-  .process { background: var(--bg); }
-  .process-timeline {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 0; margin-top: 80px;
-    position: relative;
+  .process-list {
+    border-top: 1px solid var(--line);
   }
-  .process-timeline::before {
-    content: ''; position: absolute; top: 32px;
-    left: 12.5%; right: 12.5%;
-    height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold-soft));
-    z-index: 0;
+  .process-item {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 60px 140px 1fr;
+    gap: 32px; align-items: baseline;
   }
-  @media (max-width: 768px) {
-    .process-timeline { grid-template-columns: 1fr; gap: 32px; }
-    .process-timeline::before { display: none; }
+  @media (max-width: 720px) {
+    .process-item { grid-template-columns: 1fr; gap: 8px; }
   }
-  .process-step {
-    position: relative; padding: 0 16px;
-    text-align: center;
-  }
-  .process-dot {
-    width: 64px; height: 64px;
-    background: var(--bg-alt);
-    border: 2px solid var(--gold);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 24px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 800; font-size: 20px;
-    color: var(--gold);
-    position: relative; z-index: 1;
+  .process-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: var(--accent);
   }
   .process-time {
-    font-size: 11px; color: var(--muted);
-    letter-spacing: 0.2em; font-weight: 600;
-    margin-bottom: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--ink-3);
+    letter-spacing: 0.05em;
   }
   .process-title {
-    font-size: 18px; font-weight: 700;
-    margin-bottom: 12px; line-height: 1.4;
+    font-size: 18px; font-weight: 600;
+    color: var(--ink); margin-bottom: 6px;
   }
   .process-text {
-    color: var(--muted); font-size: 13px;
-    line-height: 1.7;
+    font-size: 14px; color: var(--ink-3); line-height: 1.6;
   }
+  .process-note {
+    margin-top: 32px; font-size: 14px;
+    color: var(--ink-3); font-style: italic;
+  }
+  .process-note strong { color: var(--accent); font-weight: 600; font-style: normal; }
 
-  .process-info {
-    background: var(--bg-alt);
-    border: 1px solid var(--border-light);
-    border-radius: 12px;
-    padding: 32px 48px;
-    margin-top: 80px;
-    text-align: center;
-    display: flex; align-items: center; justify-content: center;
-    gap: 16px;
-  }
-  @media (max-width: 768px) {
-    .process-info { padding: 24px; flex-direction: column; }
-  }
-  .process-info-label {
-    color: var(--gold); font-weight: 700;
-    font-size: 13px; letter-spacing: 0.15em;
-  }
-  .process-info-text { font-size: 15px; color: var(--cream); }
-
-  /* ===== SECTION: CTA ===== */
+  /* ============ CTA ============ */
   .cta-section {
-    background: linear-gradient(135deg, var(--bg-deep) 0%, var(--bg) 50%, var(--bg-deep) 100%);
-    padding: 180px 48px;
-    position: relative; overflow: hidden;
-    text-align: center;
+    padding: 180px 40px; background: var(--bg-deep);
+    color: var(--white); text-align: center;
   }
-  .cta-section::before {
-    content: ''; position: absolute; inset: 0;
-    background:
-      radial-gradient(circle at 30% 30%, rgba(212, 162, 86, 0.15) 0%, transparent 60%),
-      radial-gradient(circle at 70% 70%, rgba(46, 117, 182, 0.1) 0%, transparent 60%);
-  }
-  .cta-inner {
-    max-width: 900px; margin: 0 auto;
-    position: relative; z-index: 1;
-  }
-  .cta-tag {
-    color: var(--gold); font-size: 12px;
-    font-weight: 700; letter-spacing: 0.4em;
-    font-family: 'Inter', sans-serif;
+  .cta-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink-4);
     margin-bottom: 48px;
   }
   .cta-headline {
-    font-family: 'Playfair Display', serif;
-    font-style: italic; font-weight: 800;
-    font-size: clamp(48px, 8vw, 96px);
-    line-height: 1.05; letter-spacing: -0.03em;
-    margin-bottom: 48px;
-    background: linear-gradient(135deg, var(--white) 0%, var(--cream) 60%, var(--gold) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .cta-message {
-    font-size: clamp(17px, 2vw, 21px);
-    line-height: 1.9; color: var(--cream);
-    margin-bottom: 64px; max-width: 720px;
+    font-size: clamp(40px, 7vw, 92px);
+    font-weight: 400; line-height: 1.0;
+    letter-spacing: -0.04em; color: var(--white);
+    margin-bottom: 48px; max-width: 12ch;
     margin-left: auto; margin-right: auto;
   }
-  .cta-message strong {
-    color: var(--gold); font-weight: 700;
+  .cta-headline .accent { color: var(--accent); }
+  .cta-text {
+    max-width: 560px; margin: 0 auto 64px;
+    font-size: 17px; line-height: 1.85;
+    color: var(--cream-on-dark); opacity: 0.85;
   }
   .cta-button {
-    display: inline-flex; align-items: center; gap: 16px;
-    background: var(--gold); color: var(--bg-deep);
-    padding: 26px 64px; border-radius: 100px;
-    text-decoration: none; font-weight: 800;
-    font-size: 18px; letter-spacing: 0.02em;
-    transition: all 0.3s;
-    box-shadow: 0 30px 80px -10px rgba(212, 162, 86, 0.5);
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--white); color: var(--bg-deep);
+    padding: 22px 44px; border-radius: 8px;
+    font-size: 15px; font-weight: 600;
+    transition: transform 0.2s;
   }
-  .cta-button:hover {
-    background: var(--gold-bright); transform: translateY(-3px);
-    box-shadow: 0 35px 90px -10px rgba(212, 162, 86, 0.6);
+  .cta-button:hover { transform: translateY(-1px); color: var(--bg-deep); }
+  .cta-button svg { width: 16px; height: 16px; transition: transform 0.2s; }
+  .cta-button:hover svg { transform: translateX(3px); }
+  .cta-meta {
+    margin-top: 56px; font-size: 13px;
+    color: var(--ink-4);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.05em;
   }
-  .cta-button svg { width: 20px; height: 20px; }
-  .cta-contact {
-    margin-top: 48px; font-size: 14px; color: var(--muted);
-  }
-  .cta-contact a {
-    color: var(--gold); text-decoration: none;
-    border-bottom: 1px solid var(--gold-soft);
-    padding-bottom: 2px; transition: color 0.2s;
-  }
-  .cta-contact a:hover { color: var(--gold-bright); }
-  .cta-signature {
-    margin-top: 16px; font-size: 13px; color: var(--muted);
+  .cta-meta a {
+    color: var(--cream-on-dark); text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
-  /* ===== FOOTER ===== */
+  /* ============ FOOTER ============ */
   footer {
-    background: var(--bg-deep);
-    padding: 60px 48px;
-    text-align: center;
-    color: var(--muted); font-size: 12px;
-    border-top: 1px solid var(--border-light);
+    background: var(--bg-deep); color: var(--ink-4);
+    padding: 60px 40px;
+    border-top: 1px solid var(--line-dark);
+  }
+  footer .container {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 24px;
   }
   footer .brand {
-    font-family: 'Inter', sans-serif;
-    font-weight: 900; font-size: 20px;
-    color: var(--gold); letter-spacing: 0.05em;
-    margin-bottom: 16px;
+    font-family: 'Inter', sans-serif; font-weight: 700;
+    font-size: 16px; letter-spacing: -0.02em;
+    color: var(--white);
   }
-  footer p { margin: 8px 0; }
-
-  /* ===== ANIMATIONS ===== */
-  .reveal {
-    opacity: 0; transform: translateY(40px);
-    transition: opacity 1s ease, transform 1s ease;
-  }
-  .reveal.visible {
-    opacity: 1; transform: translateY(0);
+  footer .meta {
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.05em;
   }
 
-  /* ===== COUNTER ANIMATION ===== */
-  .counter { display: inline-block; }
+  /* ============ REVEAL ============ */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1s ease, transform 1s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
 
-<!-- ===== NAV ===== -->
+<!-- NAV -->
 <nav id="nav">
-  <a href="#hero" class="brand">TO22<span>.</span></a>
+  <a href="#" class="brand">To22</a>
   <div class="menu">
-    <a href="#why">背景</a>
-    <a href="#founder">代表</a>
-    <a href="#vision">ビジョン</a>
-    <a href="#roles">募集</a>
-    <a href="#cta" class="cta">話を聞く</a>
+    <a href="#about">About</a>
+    <a href="#vision">Vision</a>
+    <a href="#roles">Roles</a>
+    <a href="#process">Process</a>
+    <a href="#cta" class="contact">Contact</a>
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="hero">
+<!-- HERO -->
+<section class="hero">
   <div class="hero-inner">
-    <div class="hero-label">SECOND FOUNDING / NOW HIRING</div>
-    <h1>Unlock<br>Your Potential.</h1>
-    <p class="hero-sub">
-      AI 時代に、自己効力感を持って働ける人を、<br>
-      最大限に増やす。<br>
-      <strong>この挑戦を、共にする仲間を探しています。</strong>
-    </p>
+    <div class="eyebrow">Now Hiring / Second Founding</div>
+    <h1>
+      Unlock<br>
+      your<br>
+      <span class="accent">potential.</span>
+    </h1>
     <div class="hero-meta">
-      <div class="hero-meta-text">
-        <strong>株式会社 To22</strong> は、Bootstrap で 3.5 年間黒字を続けてきたコンサルティングカンパニーです。<br>
-        今、AI 時代の人材インフラを作る「第二創業期」に入ります。<br>
-        その新しい中核チームを、ゼロから組成します。
+      <div class="hero-meta-block">
+        <div class="hero-meta-label">About this page</div>
+        <p class="hero-meta-text">
+          株式会社To22は、Bootstrap で 3.5 年間黒字を続けてきたコンサルティングカンパニーです。
+          いま、AI 時代の人材インフラを作る「第二創業期」に入ります。
+          その中核となるチームを、ゼロから組成します。
+        </p>
       </div>
-      <a href="#cta" class="hero-cta">
-        まずは話を聞く
-        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-  </div>
-  <div class="hero-scroll">SCROLL</div>
-</section>
-
-<!-- ===== WHY NOW ===== -->
-<section class="why-now" id="why">
-  <div class="inner">
-    <div class="section-tag">01 — THE MOMENT</div>
-    <h2 class="section-headline">3.5 年。<br>地道に、ここまで来ました。</h2>
-    <p class="section-lead">
-      派手な成長ではなく、Bootstrap で黒字を積み重ねる経営を選んできた。
-      その土台があるからこそ、今、次の挑戦に踏み出せます。
-    </p>
-
-    <div class="stat-grid">
-      <div class="stat">
-        <div class="stat-num"><span class="counter" data-target="74">0</span><small>社</small></div>
-        <div class="stat-label">エンタープライズ顧客</div>
-        <div class="stat-desc">ナショナルクライアントとの<br>長期取引</div>
+      <div class="hero-meta-block">
+        <a href="#cta" class="hero-cta">
+          話を聞く
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
-      <div class="stat">
-        <div class="stat-num"><span class="counter" data-target="323">0</span></div>
-        <div class="stat-label">累計成約案件</div>
-        <div class="stat-desc">FY23-FY26 累計<br>研究開発・新規事業中心</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num"><span class="counter" data-target="40">0</span><small>ヶ月</small></div>
-        <div class="stat-label">連続月次黒字</div>
-        <div class="stat-desc">創業初月から<br>赤字なしの継続経営</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num"><span class="counter" data-target="33">0</span><small>%</small></div>
-        <div class="stat-label">営業利益率</div>
-        <div class="stat-desc">Bootstrap で<br>持続可能な収益構造</div>
-      </div>
-    </div>
-
-    <div class="why-now-quote">
-      <p>「規律をもって積み重ねた基盤の上に、<br>これから "AI ベイカレント" という新事業を立ち上げます。」</p>
     </div>
   </div>
 </section>
 
-<!-- ===== FOUNDER ===== -->
-<section class="founder light" id="founder">
-  <div class="inner">
-    <div class="founder-portrait">
-      <div class="founder-avatar">N</div>
-      <div class="founder-name">野間 康平</div>
-      <div class="founder-name-en">KOHEI NOMA</div>
-      <div class="founder-divider"></div>
-      <div class="founder-role">代表取締役<br>株式会社 To22</div>
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="stat-item">
+      <div class="num en">74<span class="unit">社</span></div>
+      <div class="label">エンタープライズ顧客</div>
+    </div>
+    <div class="stat-item">
+      <div class="num en">323<span class="unit"></span></div>
+      <div class="label">累計成約案件</div>
+    </div>
+    <div class="stat-item">
+      <div class="num en">40<span class="unit">ヶ月</span></div>
+      <div class="label">連続月次黒字</div>
+    </div>
+    <div class="stat-item">
+      <div class="num en">33<span class="unit">%</span></div>
+      <div class="label">営業利益率</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder" id="about">
+  <div class="container">
+    <div class="founder-side">
+      <div class="founder-photo">
+        <div class="founder-photo-label">— Founder & CEO</div>
+      </div>
+      <div class="founder-info-name">野間 康平 / Kohei Noma</div>
+      <div class="founder-info-role">代表取締役 — 株式会社 To22</div>
       <div class="founder-tags">
-        <div class="founder-tag">京大 工学部</div>
+        <div class="founder-tag">京都大学 工学部</div>
         <div class="founder-tag">元 BCG</div>
         <div class="founder-tag">2023 創業</div>
       </div>
     </div>
-
-    <div class="founder-content">
-      <div class="section-tag">02 — FOUNDER STORY</div>
-      <h2>なぜ、To22 を作ったのか。</h2>
+    <div class="founder-body">
+      <div class="eyebrow">01 / Founder Letter</div>
+      <h2 class="section-title">なぜ、To22 を<br>作ったのか。</h2>
 
       <p>
         BCG で大手企業の戦略コンサルティングをしていた時、ある違和感がありました。
-        <strong>「優秀な人の時間が、本来の創造的業務以外に大量に消費されている」</strong>──
-        その現実を目の当たりにする中で、本当の戦力は組織の中で眠っている、と確信しました。
+        <strong>「優秀な人の時間が、本来の創造的業務以外に大量に消費されている」</strong>。
+        本当の戦力は、組織の中で眠っている。
       </p>
 
-      <div class="founder-quote">
+      <div class="pull-quote">
         眠っている才能を、<br>AI の力で解き放ちたい。
       </div>
 
       <p>
-        2022 年 11 月、ChatGPT が公開された瞬間に、これだ、と思いました。
-        知的労働の構造が根本から変わる時代の幕開け。
-        AI × 人材という掛け合わせで、社会構造そのものを変えられる予感が確信に変わりました。
+        2022 年 11 月、ChatGPT が公開された瞬間に確信しました。
+        知的労働の構造が、根本から変わる時代の幕開けだと。
+        AI と人材の掛け合わせで、社会構造そのものを変えられる予感が、確信に変わりました。
       </p>
 
       <p>
@@ -985,421 +705,354 @@
         いま、その土台の上に、<strong>次の挑戦</strong>に踏み出します。
       </p>
 
-      <div class="signature">── 野間 康平</div>
+      <div class="signature">— 野間 康平</div>
     </div>
   </div>
 </section>
 
-<!-- ===== WHAT WE BUILD ===== -->
-<section class="what-we-build" id="build">
-  <div class="inner">
-    <div class="section-tag">03 — WHAT WE BUILD</div>
-    <h2 class="section-headline">これから作るのは、<br>"AI ベイカレント" です。</h2>
-
-    <div class="build-grid">
-      <div>
-        <div class="build-headline">
-          部長・課長に<br>
-          <strong>"個人付き"</strong>で<br>
-          寄り添う、<br>
-          AI 業務改善人材。
-        </div>
-        <p class="build-text">
-          コンサルでも派遣でもない、<strong>新しいカテゴリ</strong>を作ります。
-        </p>
-        <p class="build-text">
-          Insighthub で運営してきた<strong>子育て中チーム（女性中心）</strong>を核に、
-          育休復帰・地方在住・リスキリング層を加え、CCA（独自認定資格）で品質保証された
-          リモート前提の AI 業務改善人材プールを構築します。
-        </p>
-        <p class="build-text">
-          目指すのは、<strong>役職者の AI 化された右腕</strong>。
-          月 ¥30 万から段階的に導入できる、これまでにない価値提供モデルです。
-        </p>
-      </div>
-
-      <div class="build-visual">
-        <div class="build-orbit"></div>
-        <div class="build-orbit-2"></div>
-        <div class="build-core">AI<br>ベイカレント</div>
-        <div class="build-node build-node-1">人に付く</div>
-        <div class="build-node build-node-2">AI で磨く</div>
-        <div class="build-node build-node-3">リモート</div>
-        <div class="build-node build-node-4">CCA 認定</div>
-      </div>
-    </div>
-
-    <div class="build-principles">
-      <div class="principle">
-        <div class="principle-num">01 / PRINCIPLE</div>
-        <div class="principle-title">人に付く</div>
-        <div class="principle-text">
-          「組織」「プロジェクト」ではなく、部長・課長「個人」に付く。
-          業務は人に紐づくから、人にアプローチする方が本質的です。
-        </div>
-      </div>
-      <div class="principle">
-        <div class="principle-num">02 / PRINCIPLE</div>
-        <div class="principle-title">AI で磨く</div>
-        <div class="principle-text">
-          Worker が AI と一緒に、業務フロー設計と AI 実装を行う。
-          受託ではなく、現場と一緒に「実装」していくモデルです。
-        </div>
-      </div>
-      <div class="principle">
-        <div class="principle-num">03 / PRINCIPLE</div>
-        <div class="principle-title">全国分散</div>
-        <div class="principle-text">
-          子育て中チームを核に、育休復帰・地方・リスキリング層を加え、
-          リモート前提・在宅で運営。場所を問わない人材プールです。
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== VISION ===== -->
-<section class="vision">
-  <div class="vision-label">OUR PURPOSE</div>
-  <div class="vision-main">Unlock<br>Your Potential.</div>
+<!-- VISION -->
+<section class="vision" id="vision">
+  <div class="vision-eyebrow">02 / Purpose</div>
+  <h2 class="vision-statement">Unlock your <span class="accent">potential.</span></h2>
   <div class="vision-jp">人間の可能性を、解き放つ。</div>
   <div class="vision-divider"></div>
   <p class="vision-text">
-    日本には、<strong>約 1,800 万人</strong>の活かされていないポテンシャルがあります。<br>
-    育休復帰女性、子育て中ママ、地方在住者、リスキリング層、副業希望者──<br><br>
-    AI の力で、この眠っている才能を解き放ちたい。<br>
-    そして、<strong>AI 時代に、自己効力感を持って働ける人を、最大限に増やす。</strong><br><br>
+    日本には、約 1,800 万人の活かされていないポテンシャルがあります。
+    育休復帰女性、子育て中ママ、地方在住者、リスキリング層、副業希望者──
+    彼らが活躍する場が、社会に整っていない。
+    <br><br>
+    AI の力で、この眠っている才能を解き放ちたい。
+    AI 時代に、自己効力感を持って働ける人を、最大限に増やす。
     これが、To22 の存在意義です。
   </p>
 </section>
 
-<!-- ===== TRUSTED BY ===== -->
-<section class="trusted">
-  <div class="inner">
-    <div class="section-tag">04 — TRUSTED BY</div>
-    <h3>これまで <strong>74 社</strong> のナショナルクライアントに、<br>研究開発・新規事業・経営企画の支援をしてきました。</h3>
-  </div>
-  <div class="logo-marquee">
-    <div class="logo-track">
-      <div class="logo-item">関西電力</div>
-      <div class="logo-item">FUJIFILM</div>
-      <div class="logo-item">KOBELCO</div>
-      <div class="logo-item">NEC</div>
-      <div class="logo-item">KDDI</div>
-      <div class="logo-item">NTT DATA</div>
-      <div class="logo-item">SHISEIDO</div>
-      <div class="logo-item">YAMAHA</div>
-      <div class="logo-item">CASIO</div>
-      <div class="logo-item">Kao</div>
-      <div class="logo-item">Kubota</div>
-      <div class="logo-item">伊藤忠</div>
-      <div class="logo-item">DNP</div>
-      <div class="logo-item">LIFULL</div>
-      <div class="logo-item">Timee</div>
-      <div class="logo-item">BIPROGY</div>
-      <div class="logo-item">House 食品</div>
-      <div class="logo-item">東急不動産</div>
-      <div class="logo-item">FUJIFILM</div>
-      <div class="logo-item">Goodpatch</div>
-      <div class="logo-item">三菱総合研究所</div>
-      <div class="logo-item">ビザスク</div>
-      <div class="logo-item">日本財団</div>
-      <div class="logo-item">Pacific Consultants</div>
-      <!-- duplicate for seamless loop -->
-      <div class="logo-item">関西電力</div>
-      <div class="logo-item">FUJIFILM</div>
-      <div class="logo-item">KOBELCO</div>
-      <div class="logo-item">NEC</div>
-      <div class="logo-item">KDDI</div>
-      <div class="logo-item">NTT DATA</div>
-      <div class="logo-item">SHISEIDO</div>
-      <div class="logo-item">YAMAHA</div>
-      <div class="logo-item">CASIO</div>
-      <div class="logo-item">Kao</div>
-      <div class="logo-item">Kubota</div>
-      <div class="logo-item">伊藤忠</div>
+<!-- BUSINESS / WHAT WE BUILD -->
+<section class="business">
+  <div class="container">
+    <div>
+      <div class="eyebrow">03 / What we build</div>
+      <h2 class="section-title">"AI ベイカレント"<br>という新事業。</h2>
+      <p class="section-lead">
+        部長・課長に "個人付き" で寄り添う、AI 業務改善人材。
+        コンサルでも派遣でもない、新しいカテゴリを作ります。
+      </p>
+    </div>
+    <div class="business-body">
+      <p>
+        既存事業（Insighthub）で運営してきた <strong>子育て中チーム</strong> を核に、
+        育休復帰・地方在住・リスキリング層を加え、独自認定資格（CCA）で品質保証された
+        リモート前提の AI 業務改善人材プールを構築します。
+      </p>
+      <p>
+        目指すのは、<strong>役職者の AI 化された右腕</strong>。
+        月 ¥30 万から段階的に導入できる、これまでにない価値提供モデルです。
+      </p>
+
+      <div class="business-list">
+        <div class="business-item">
+          <div class="business-item-num">01</div>
+          <div class="business-item-body">
+            <h3>人に付く</h3>
+            <p>「組織」「プロジェクト」ではなく、部長・課長「個人」に付く。業務は人に紐づくから、人にアプローチする方が本質的。</p>
+          </div>
+        </div>
+        <div class="business-item">
+          <div class="business-item-num">02</div>
+          <div class="business-item-body">
+            <h3>AI で磨く</h3>
+            <p>Worker が AI と一緒に、業務フロー設計と AI 実装を行う。受託ではなく、現場と一緒に「実装」していくモデル。</p>
+          </div>
+        </div>
+        <div class="business-item">
+          <div class="business-item-num">03</div>
+          <div class="business-item-body">
+            <h3>全国分散</h3>
+            <p>子育て中チームを核に、地方・育休復帰・リスキリング層を加え、リモート前提で運営。場所を問わない人材プール。</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== ROLES ===== -->
+<!-- CLIENTS -->
+<section class="clients">
+  <div class="container">
+    <div>
+      <div class="clients-label">04 / Trusted by</div>
+      <div class="clients-headline">
+        これまで <strong>74 社</strong> のナショナルクライアントに、
+        研究開発・新規事業・経営企画の支援をしてきました。
+      </div>
+    </div>
+    <div class="clients-grid">
+      <div>関西電力</div>
+      <div>FUJIFILM</div>
+      <div>KOBELCO</div>
+      <div>NEC</div>
+      <div>KDDI</div>
+      <div>NTT DATA</div>
+      <div>SHISEIDO</div>
+      <div>YAMAHA</div>
+      <div>CASIO</div>
+      <div>Kao</div>
+      <div>Kubota</div>
+      <div>伊藤忠</div>
+      <div>DNP</div>
+      <div>LIFULL</div>
+      <div>Timee</div>
+      <div>BIPROGY</div>
+      <div>House 食品</div>
+      <div>東急不動産</div>
+      <div>Goodpatch</div>
+      <div>三菱総研</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES -->
 <section class="roles" id="roles">
-  <div class="inner">
-    <div class="section-tag">05 — OPEN ROLES</div>
-    <h2 class="section-headline">2 つの中核ポジションを<br>募集しています。</h2>
-    <p class="section-lead">
-      AI ベイカレントチームをゼロから組成する、設計者と工場長。
-      第二創業期の意思決定を、一緒に重ねていく仲間を本気で探しています。
-    </p>
+  <div class="container">
+    <div>
+      <div class="eyebrow">05 / Open roles</div>
+      <h2 class="section-title">2 つの中核ポジションを<br>募集しています。</h2>
+      <p class="section-lead">
+        AI ベイカレントチームをゼロから組成する、設計者と工場長。
+        第二創業期の意思決定を、一緒に重ねていく仲間を本気で探しています。
+      </p>
+    </div>
+    <div class="roles-list">
 
-    <div class="role-grid">
       <div class="role">
-        <div class="role-meta">
-          <div class="role-num">01</div>
-          <div>
-            <div class="role-cat">EXECUTIVE</div>
-          </div>
-        </div>
-        <div class="role-title">CHRO / COO 候補</div>
-        <div class="role-sub">〜 新チームの「設計者」 〜</div>
+        <div class="role-num">01</div>
+        <div>
+          <div class="role-cat">Executive</div>
+          <h3 class="role-title">CHRO / COO 候補</h3>
+          <p class="role-sub">新チームの「設計者」</p>
 
-        <div class="role-mission">
-          <div class="role-mission-label">YOUR MISSION</div>
-          <div class="role-mission-text">
-            AI ベイカレントチームの「人・組織」全体設計図を描き、ファクトリーを構築する。
+          <div class="role-mission">
+            AI ベイカレントチームの <strong>「人・組織」全体設計図</strong> を描き、
+            ファクトリーを構築する。
           </div>
-        </div>
 
-        <div class="role-tasks-title">KEY RESPONSIBILITIES</div>
-        <ul class="role-tasks">
-          <li>採用・育成・評価・退職の全 SOP 設計</li>
-          <li>AI + 仕組みによる人材マネジメント自動化</li>
-          <li>スケーラブルな組織図の構築</li>
-          <li>カルチャー設計（パーパス浸透）</li>
-          <li>全社オペレーション統括</li>
-        </ul>
+          <div class="role-section-title">Responsibilities</div>
+          <ul class="role-tasks">
+            <li>採用・育成・評価・退職の全 SOP 設計</li>
+            <li>AI + 仕組みによる人材マネジメント自動化</li>
+            <li>スケーラブルな組織図の構築</li>
+            <li>カルチャー設計（パーパス浸透）</li>
+            <li>全社オペレーション統括</li>
+          </ul>
 
-        <div class="role-comp">
-          <div>
-            <div class="role-comp-item-label">BASE SALARY</div>
-            <div class="role-comp-item-value">¥1,200 - ¥1,800 万</div>
-          </div>
-          <div>
-            <div class="role-comp-item-label">POSITION</div>
-            <div class="role-comp-item-value">執行役員候補</div>
+          <div class="role-comp">
+            <div>
+              <div class="role-comp-label">Base Salary</div>
+              <div class="role-comp-value">¥1,200 - ¥1,800 万</div>
+            </div>
+            <div>
+              <div class="role-comp-label">Position</div>
+              <div class="role-comp-value">執行役員候補</div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="role">
-        <div class="role-meta">
-          <div class="role-num">02</div>
-          <div>
-            <div class="role-cat">OPERATIONS</div>
-          </div>
-        </div>
-        <div class="role-title">Delivery Manager</div>
-        <div class="role-sub">〜 デリバリーの「工場長」 〜</div>
+        <div class="role-num">02</div>
+        <div>
+          <div class="role-cat">Operations</div>
+          <h3 class="role-title">Delivery Manager</h3>
+          <p class="role-sub">デリバリーの「工場長」</p>
 
-        <div class="role-mission">
-          <div class="role-mission-label">YOUR MISSION</div>
-          <div class="role-mission-text">
-            AI ベイカレント案件を、標準プロセス × AI 活用で高品質・高回転に回す。
+          <div class="role-mission">
+            AI ベイカレント案件を、<strong>標準プロセス × AI 活用</strong> で
+            高品質・高回転に回す。
           </div>
-        </div>
 
-        <div class="role-tasks-title">KEY RESPONSIBILITIES</div>
-        <ul class="role-tasks">
-          <li>案件プロジェクト管理（複数 Pod 並行）</li>
-          <li>AI 業務改善プロセスの標準化</li>
-          <li>Before/After 定量化フレーム運用</li>
-          <li>クライアント定期レポート品質管理</li>
-          <li>Worker 配置・稼働率の最適化</li>
-        </ul>
+          <div class="role-section-title">Responsibilities</div>
+          <ul class="role-tasks">
+            <li>案件プロジェクト管理（複数 Pod 並行）</li>
+            <li>AI 業務改善プロセスの標準化</li>
+            <li>Before / After 定量化フレーム運用</li>
+            <li>クライアント定期レポート品質管理</li>
+            <li>Worker 配置・稼働率の最適化</li>
+          </ul>
 
-        <div class="role-comp">
-          <div>
-            <div class="role-comp-item-label">BASE SALARY</div>
-            <div class="role-comp-item-value">¥800 - ¥1,200 万</div>
-          </div>
-          <div>
-            <div class="role-comp-item-label">POSITION</div>
-            <div class="role-comp-item-value">Delivery 本部長候補</div>
+          <div class="role-comp">
+            <div>
+              <div class="role-comp-label">Base Salary</div>
+              <div class="role-comp-value">¥800 - ¥1,200 万</div>
+            </div>
+            <div>
+              <div class="role-comp-label">Position</div>
+              <div class="role-comp-value">Delivery 本部長候補</div>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== MINDSET ===== -->
-<section class="mindset light">
-  <div class="inner">
-    <div class="section-tag" style="color: var(--gold-dark);">06 — WHO WE LOOK FOR</div>
-    <h2 class="section-headline">スキルより、<br>マインドセットを見ます。</h2>
-    <p class="section-lead">
-      4 つの素質。100% 共感できる方を、本気で探しています。
-    </p>
-
-    <div class="mindset-grid">
-      <div class="mindset-card">
-        <div class="mindset-num">01 / MINDSET</div>
-        <div class="mindset-title">パーパスに共感する</div>
-        <div class="mindset-text">
-          「原石を解き放つ」という社会変革への情熱を、自分の言葉で語れる人。
-        </div>
-      </div>
-      <div class="mindset-card">
-        <div class="mindset-num">02 / MINDSET</div>
-        <div class="mindset-title">仕組みで解く</div>
-        <div class="mindset-text">
-          根性ではなく、SOP・プロンプト・システムで問題を解決できる人。
-        </div>
-      </div>
-      <div class="mindset-card">
-        <div class="mindset-num">03 / MINDSET</div>
-        <div class="mindset-title">数値で決める</div>
-        <div class="mindset-text">
-          感情・印象・関係性ではなく、KPI とデータで意思決定できる人。
-        </div>
-      </div>
-      <div class="mindset-card">
-        <div class="mindset-num">04 / MINDSET</div>
-        <div class="mindset-title">AI に任せる</div>
-        <div class="mindset-text">
-          教育・ヒアリング・管理を、AI に任せる発想ができる。「AI にやらせるのが最速」。
-        </div>
-      </div>
+<!-- MINDSET -->
+<section class="mindset">
+  <div class="container">
+    <div>
+      <div class="eyebrow">06 / Who we look for</div>
+      <h2 class="section-title">スキルより、<br>マインドセットを<br>見ます。</h2>
+      <p class="section-lead">
+        4 つの素質に、100% 共感できる方を、本気で探しています。
+        どれか一つでも欠けると、機能しないチームになります。
+      </p>
     </div>
+    <div class="mindset-list">
 
-    <div class="mindset-note">
-      ▶ <strong>妥協はしません。</strong>4 つに共感できる、たった一人と組みたい。
+      <div class="mindset-item">
+        <div class="mindset-num">01</div>
+        <div>
+          <h3 class="mindset-title">パーパスに共感する</h3>
+          <p class="mindset-text">
+            「原石を解き放つ」という社会変革への情熱を、自分の言葉で語れる人。
+          </p>
+        </div>
+      </div>
+
+      <div class="mindset-item">
+        <div class="mindset-num">02</div>
+        <div>
+          <h3 class="mindset-title">仕組みで解く</h3>
+          <p class="mindset-text">
+            根性ではなく、SOP・プロンプト・システムで問題を解決できる人。
+          </p>
+        </div>
+      </div>
+
+      <div class="mindset-item">
+        <div class="mindset-num">03</div>
+        <div>
+          <h3 class="mindset-title">数値で決める</h3>
+          <p class="mindset-text">
+            感情・印象・関係性ではなく、KPI とデータで意思決定できる人。
+          </p>
+        </div>
+      </div>
+
+      <div class="mindset-item">
+        <div class="mindset-num">04</div>
+        <div>
+          <h3 class="mindset-title">AI に任せる</h3>
+          <p class="mindset-text">
+            教育・ヒアリング・管理を、AI に任せる発想ができる人。「AI にやらせるのが最速」。
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== PROCESS ===== -->
+<!-- PROCESS -->
 <section class="process" id="process">
-  <div class="inner">
-    <div class="section-tag">07 — HOW WE TALK</div>
-    <h2 class="section-headline">話し方は、<br>4 ステップ。</h2>
-    <p class="section-lead">
-      最短 3 週間。双方向の見極めを大切にします。
-      本気でマッチすれば、2 週間でのオファーも可能です。
-    </p>
-
-    <div class="process-timeline">
-      <div class="process-step">
-        <div class="process-dot">01</div>
-        <div class="process-time">60 MIN</div>
-        <div class="process-title">カジュアル面談</div>
-        <div class="process-text">
-          まず野間と話す。<br>
-          パーパスと価値観の<br>
-          相互確認。
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-dot">02</div>
-        <div class="process-time">120 MIN</div>
-        <div class="process-title">課題ディスカッション</div>
-        <div class="process-text">
-          「第二創業期の<br>
-          最初 90 日プラン」を<br>
-          一緒に議論。
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-dot">03</div>
-        <div class="process-time">90 MIN</div>
-        <div class="process-title">条件すり合わせ</div>
-        <div class="process-text">
-          報酬・入社日・<br>
-          権限範囲の<br>
-          詳細協議。
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-dot">04</div>
-        <div class="process-time">FINAL</div>
-        <div class="process-title">オファー & 契約</div>
-        <div class="process-text">
-          正式オファー、<br>
-          契約書締結、<br>
-          入社準備。
-        </div>
-      </div>
+  <div class="container">
+    <div>
+      <div class="eyebrow">07 / How we talk</div>
+      <h2 class="section-title">話し方は、<br>4 ステップ。</h2>
+      <p class="section-lead">
+        最短 3 週間。双方向の見極めを大切にします。
+        本気でマッチすれば、2 週間でのオファーも可能です。
+      </p>
     </div>
-
-    <div class="process-info">
-      <div class="process-info-label">★ TOTAL</div>
-      <div class="process-info-text">最短 3 週間 ／ 本気でマッチすれば、2 週間でのオファーも可能</div>
+    <div>
+      <div class="process-list">
+        <div class="process-item">
+          <div class="process-num">01</div>
+          <div class="process-time">60 MIN</div>
+          <div>
+            <div class="process-title">カジュアル面談</div>
+            <div class="process-text">まず野間と話す。パーパスと価値観の相互確認。</div>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">02</div>
+          <div class="process-time">120 MIN</div>
+          <div>
+            <div class="process-title">課題ディスカッション</div>
+            <div class="process-text">「第二創業期の最初 90 日プラン」を一緒に議論。</div>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">03</div>
+          <div class="process-time">90 MIN</div>
+          <div>
+            <div class="process-title">条件すり合わせ</div>
+            <div class="process-text">報酬・入社日・権限範囲の詳細協議。</div>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">04</div>
+          <div class="process-time">— FINAL —</div>
+          <div>
+            <div class="process-title">オファー & 契約</div>
+            <div class="process-text">正式オファー、契約書締結、入社準備。</div>
+          </div>
+        </div>
+      </div>
+      <p class="process-note">
+        ▶ <strong>最短 3 週間</strong>。本気でマッチすれば、2 週間でのオファーも可能です。
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
+<!-- CTA -->
 <section class="cta-section" id="cta">
-  <div class="cta-inner">
-    <div class="cta-tag">JOIN US</div>
-    <h2 class="cta-headline">
-      まずは野間と、<br>
-      1 時間。
-    </h2>
-    <p class="cta-message">
-      「AI 時代に、自己効力感を持って働ける人を、最大限に増やす。」<br>
-      これが、To22 が社会にもたらすインパクトです。<br><br>
-      <strong>新しいチームを、ゼロから一緒に作り上げる。</strong><br>
-      この挑戦を共にしてくれる、最初の仲間を探しています。
-    </p>
-
-    <a href="mailto:claude@to22inc.com?subject=To22%20第二創業期%20採用エントリー&body=To22%20野間様%0A%0Aお世話になります。%0A採用サイトを拝見し、ぜひお話を伺いたくご連絡しました。%0A%0A▼お名前：%0A▼経歴概要：%0A▼関心ポジション：（CHRO/COO 候補 ／ Delivery Manager）%0A▼ご都合のよい日程（複数候補）：%0A%0Aどうぞよろしくお願いいたします。" class="cta-button">
-      腹を割って話す
-      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-
-    <div class="cta-contact">
-      📧 <a href="mailto:claude@to22inc.com">claude@to22inc.com</a>
-    </div>
-    <div class="cta-signature">
-      株式会社 To22 ／ 代表取締役 野間 康平
-    </div>
+  <div class="cta-eyebrow">08 / Get in touch</div>
+  <h2 class="cta-headline">
+    まずは野間と、<br>
+    <span class="accent">1 時間。</span>
+  </h2>
+  <p class="cta-text">
+    「AI 時代に、自己効力感を持って働ける人を、最大限に増やす。」<br>
+    新しいチームを、ゼロから一緒に作り上げる。<br>
+    この挑戦を共にしてくれる、最初の仲間を探しています。
+  </p>
+  <a href="mailto:claude@to22inc.com?subject=To22%20第二創業期%20採用エントリー&body=To22%20野間様%0A%0Aお世話になります。%0A採用サイトを拝見し、ぜひお話を伺いたくご連絡しました。%0A%0A▼お名前：%0A▼経歴概要：%0A▼関心ポジション：（CHRO/COO 候補 ／ Delivery Manager）%0A▼ご都合のよい日程（複数候補）：%0A%0Aどうぞよろしくお願いいたします。" class="cta-button">
+    話を聞く
+    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+  <div class="cta-meta">
+    <a href="mailto:claude@to22inc.com">claude@to22inc.com</a> / 野間 康平
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
-  <div class="brand">TO22.</div>
-  <p>株式会社 To22</p>
-  <p>〒103-0024 東京都中央区日本橋小舟町 8-13</p>
-  <p>© 2026 To22 Inc. All rights reserved.</p>
+  <div class="container">
+    <div class="brand">To22</div>
+    <div class="meta">© 2026 株式会社 To22 / All rights reserved</div>
+  </div>
 </footer>
 
 <script>
   // Sticky nav
   const nav = document.getElementById('nav');
-  let lastScroll = 0;
   window.addEventListener('scroll', () => {
-    const scroll = window.pageYOffset;
-    if (scroll > 100) nav.classList.add('scrolled');
+    if (window.scrollY > 60) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
-    lastScroll = scroll;
   });
 
-  // Reveal animations
-  const observer = new IntersectionObserver(entries => {
+  // Reveal
+  const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-      }
+      if (e.isIntersecting) e.target.classList.add('in');
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
   document.querySelectorAll('section').forEach(s => {
     s.classList.add('reveal');
-    observer.observe(s);
+    io.observe(s);
   });
-
-  // Counter animation
-  const counters = document.querySelectorAll('.counter');
-  const counterObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting && !e.target.dataset.animated) {
-        e.target.dataset.animated = 'true';
-        const target = parseInt(e.target.dataset.target);
-        const duration = 2000;
-        const start = Date.now();
-        const update = () => {
-          const elapsed = Date.now() - start;
-          const progress = Math.min(elapsed / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          e.target.textContent = Math.floor(eased * target);
-          if (progress < 1) requestAnimationFrame(update);
-        };
-        update();
-      }
-    });
-  }, { threshold: 0.5 });
-  counters.forEach(c => counterObserver.observe(c));
 </script>
 
 </body>

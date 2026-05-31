@@ -57,14 +57,12 @@
   }
   nav .brand {
     display: flex; align-items: center; gap: 8px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700; font-size: 24px; color: var(--white);
-    letter-spacing: -0.02em;
+    height: 36px;
   }
-  nav .brand .heart {
-    color: var(--white);
-    font-size: 22px;
-    transform: translateY(-2px);
+  nav .brand img {
+    height: 28px; width: auto;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s;
   }
   nav .menu { display: flex; gap: 36px; align-items: center; }
   nav .menu a {
@@ -316,13 +314,15 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   }
   .founder-photo {
-    width: 160px; height: 160px; margin: 0 auto 24px;
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    width: 200px; height: 200px; margin: 0 auto 24px;
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Oswald', sans-serif;
-    font-size: 64px; font-weight: 500; color: var(--white);
-    letter-spacing: -0.02em;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  }
+  .founder-photo img {
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: center 20%;
+    display: block;
   }
   .founder-name {
     font-size: 22px; font-weight: 700;
@@ -583,7 +583,7 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#" class="brand">To<span class="heart">♡</span></a>
+  <a href="#" class="brand"><img src="assets/logo.png" alt="To22"></a>
   <div class="menu">
     <a href="#mission">Mission</a>
     <a href="#vision">Vision</a>
@@ -687,23 +687,28 @@
 
     <div class="founder-content">
       <div class="founder-card">
-        <div class="founder-photo">N</div>
+        <div class="founder-photo"><img src="assets/noma.png" alt="野間 康平"></div>
         <div class="founder-name">野間 康平</div>
         <div class="founder-name-en">Kohei Noma</div>
         <div class="founder-divider"></div>
         <div class="founder-role">代表取締役<br>株式会社 To22</div>
         <div class="founder-tags">
           <div class="founder-tag">京大 工学部</div>
+          <div class="founder-tag">元 Panasonic</div>
           <div class="founder-tag">元 BCG</div>
-          <div class="founder-tag">2023 創業</div>
         </div>
       </div>
 
       <div class="founder-body">
         <p>
-          BCG で大手企業の戦略コンサルティングをしていた時、ある違和感がありました。
-          <strong>「優秀な人の時間が、本来の創造的業務以外に大量に消費されている」</strong>。
-          本当の戦力は、組織の中で眠っている。そう気づいたのが、すべての始まりでした。
+          京都大学 工学部を卒業後、<strong>パナソニックに新卒代表として入社</strong>。
+          新規事業部門にて、機械学習エンジニアから Bizdev まで幅広く担当しました。
+        </p>
+
+        <p>
+          その後、<strong>ボストン・コンサルティング・グループ</strong>にて、
+          M&A 戦略、DX 戦略、成長戦略、新規事業、構造改革等の立案・実行支援等、
+          数多くのプロジェクトに従事しました。
         </p>
 
         <div class="founder-quote">
@@ -717,14 +722,15 @@
         </p>
 
         <p>
-          2023 年 1 月、To22 を創業。
-          社名に込めたのは、<strong>「より良い 22 世紀を創る」</strong>という想い。
-          目の前の数年ではなく、100 年先の社会を見据えて、AI と人間の共存を追求します。
+          戦略コンサルティング及び生成 AI 関連サービスを展開する <strong>To22 を創業</strong>。
+          事業開始 2 年目で数多くの大企業へのコンサルティングを実施し、
+          プロジェクト全体をリードしています。
         </p>
 
         <p>
-          今、第二創業期に入ります。<br>
-          この大きな挑戦を、共に歩んでくれる仲間を、本気で探しています。
+          社名に込めたのは、<strong>「より良い 22 世紀を創る」</strong>という想い。
+          目の前の数年ではなく、100 年先の社会を見据えて、AI と人間の共存を追求します。
+          今、第二創業期に入ります。この大きな挑戦を、共に歩んでくれる仲間を、本気で探しています。
         </p>
 
         <div class="founder-signature">— 野間 康平</div>
@@ -882,7 +888,9 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="brand">To<span style="color: var(--red);">♡</span></div>
+  <div class="brand">
+    <img src="assets/logo.png" alt="To22" style="height: 32px; filter: brightness(0) invert(1);">
+  </div>
   <p>株式会社 To22 — より良い 22 世紀を創る</p>
   <p>〒103-0024 東京都中央区日本橋小舟町 8-13</p>
   <p style="margin-top: 16px;">© 2026 To22 Inc. All rights reserved.</p>
